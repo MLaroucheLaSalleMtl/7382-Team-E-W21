@@ -1,2 +1,2 @@
-# 7382-Team-E-W21
-Bryan, Christopher, Mingxi
+# 7378-Team-E-W21
+Jiahui, Shunbin, Trong Nghia
