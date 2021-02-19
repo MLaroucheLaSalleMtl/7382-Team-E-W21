@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4028231100219441733
-    second: WorldOne_LTower1
+    second: WorlOnePole_1
   - first:
       213: -3434129433948509968
     second: WorldOne_LTower2
   - first:
       213: 3901523939930906030
-    second: WorldOne_STower1
+    second: WorlOnePole_2
   - first:
       213: -9214182926208943745
-    second: WorldOne_STower2
+    second: WorlOnePole_3
   - first:
       213: -7027982850383821543
     second: WorldOne_LTower2
   - first:
       213: 7248653097212702750
-    second: WorldOne_STower1
+    second: WorlOnePole_2
   - first:
       213: -2685392978934875814
-    second: WorldOne_STower2
+    second: WorlOnePole_3
   - first:
       213: -4161397440855920115
-    second: decorative_props_1
+    second: WorlOneDeco_1
   - first:
       213: 8087999861268856161
-    second: decorative_props_2
+    second: WorlOneDeco_3
   - first:
       213: 3988648210583538977
     second: decorative_props_3
@@ -40,7 +40,25 @@ TextureImporter:
     second: decorative_props_5
   - first:
       213: -8084039896554768750
-    second: decorative_props_12
+    second: WorlOneDeco_8
+  - first:
+      213: -4918996166978469355
+    second: WorlOneDeco_2
+  - first:
+      213: 4185220545961213810
+    second: WorlOneDeco_4
+  - first:
+      213: 1300347726681727058
+    second: WorlOnePole_4
+  - first:
+      213: 2378912961218152301
+    second: WorlOnePole_5
+  - first:
+      213: 23964417828776799
+    second: WorlOnePole_6
+  - first:
+      213: -2765518219922705116
+    second: WorlOnePole_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,7 +103,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,57 +160,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WorldOne_LTower1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 119
-        width: 22
-        height: 91
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 542c2c9d7d627e730800000000000000
-      internalID: 4028231100219441733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WorldOne_LTower2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 119
-        width: 22
-        height: 91
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f829c089758750d0800000000000000
-      internalID: -3434129433948509968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WorldOne_STower1
+      name: WorlOnePole_2
       rect:
         serializedVersion: 2
         x: 117
         y: 151
         width: 22
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,28 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WorldOne_STower2
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 151
-        width: 22
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f79b8db8275a02080800000000000000
-      internalID: -9214182926208943745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decorative_props_1
+      name: WorlOneDeco_1
       rect:
         serializedVersion: 2
         x: 3
@@ -247,15 +202,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: decorative_props_2
+      name: WorlOneDeco_3
       rect:
         serializedVersion: 2
         x: 39
         y: 67
         width: 16
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,8 +230,8 @@ TextureImporter:
         y: 42
         width: 16
         height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,8 +251,8 @@ TextureImporter:
         y: 42
         width: 16
         height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,8 +272,8 @@ TextureImporter:
         y: 42
         width: 16
         height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,15 +286,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: decorative_props_6
+      name: WorlOneDeco_5
       rect:
         serializedVersion: 2
         x: 196
         y: 51
         width: 23
         height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -352,15 +307,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: decorative_props_7
+      name: WorlOneDeco_7
       rect:
         serializedVersion: 2
         x: 229
         y: 51
         width: 23
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -373,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: decorative_props_8
+      name: WorlOneDeco_6
       rect:
         serializedVersion: 2
         x: 276
@@ -394,12 +349,33 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: decorative_props_12
+      name: WorlOneDeco_8
       rect:
         serializedVersion: 2
         x: 340
         y: 51
         width: 23
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29674cf8b88bfcf80800000000000000
+      internalID: -8084039896554768750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WorlOneDeco_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 23
+        width: 22
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -408,8 +384,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29674cf8b88bfcf80800000000000000
-      internalID: -8084039896554768750
+      spriteID: 5128dbf4c073cbbb0800000000000000
+      internalID: -4918996166978469355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WorlOneDeco_4
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 25
+        width: 16
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f3fac89e3e41a30800000000000000
+      internalID: 4185220545961213810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WorlOnePole_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 133
+        width: 22
+        height: 91
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250e95d2e53cb0210800000000000000
+      internalID: 1300347726681727058
       vertices: []
       indices: 
       edges: []

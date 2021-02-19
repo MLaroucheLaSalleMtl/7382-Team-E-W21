@@ -7,12 +7,15 @@ public class StatsLevelUp : MonoBehaviour
 {
     private GameManager manager;
     [SerializeField] private Text statText;
+    
+    [SerializeField] private Text spText;
     [Header("Value Increase per stat level")]
     [Range (10,50)] [SerializeField] private int HP;
     [Range(10, 50)] [SerializeField] private int Armor;
     [Range (10,50)] [SerializeField] private int Speed;
     [Range (0.01f, 0.03f)] [SerializeField] private float Cooldown;
     [Range(0.01f, 0.03f)] [SerializeField] private float ReloadSpeed;
+    
 
 
     // Start is called before the first frame update
@@ -45,11 +48,11 @@ public class StatsLevelUp : MonoBehaviour
             }
 
             manager.PlayerSP--;
-            ShowStats();
+            ShowStats(); //Used to refresh what is displayed on the stats window, without needing to constantly call in Update()
         }
     }
 
-    public void ShowStats()
+    public void ShowStats() //Call this method when player presses button to open Stats menu
     {        
         statText.text = "Max HP = " + manager.PlayerMAXHP +
                        "\nArmor = " + manager.PlayerArmor +
@@ -57,6 +60,7 @@ public class StatsLevelUp : MonoBehaviour
                        "\nCooldown = " + manager.PlayerCDReduc*100 + "%" +
                        "\nReload = " + manager.PlayerRSpeed*100 + "%";
 
+        spText.text = "Skill Points: " + manager.PlayerSP;
         //Disable/enable buttons to increase stats
         GameObject[] toggle = new GameObject[5];
         toggle = GameObject.FindGameObjectsWithTag("StatBtn");
@@ -74,11 +78,5 @@ public class StatsLevelUp : MonoBehaviour
                 o.SetActive(true);
             }
         }        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

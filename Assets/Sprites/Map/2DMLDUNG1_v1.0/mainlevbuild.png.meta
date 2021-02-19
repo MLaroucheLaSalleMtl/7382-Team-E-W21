@@ -4,28 +4,28 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -418600334569417129
-    second: MapOneWall_1
+    second: MapOneBlackBg
   - first:
       213: -5727760111797192145
-    second: MapOneWall_2
+    second: MapOneWall_1
   - first:
       213: 4011826581710594722
     second: MapOneWall_3
   - first:
       213: -2921649638176895635
-    second: MapOneWall_5
+    second: MapOneWallL_2
   - first:
       213: -5296460117389895971
-    second: MapOneWall_7
+    second: MapOneWall_5
   - first:
       213: -7498149340825567013
     second: MapOneWall_4
   - first:
       213: 4188783655783027223
-    second: MapOneDoor_1
+    second: WorldOneHoleBR
   - first:
       213: 4262012770324947943
-    second: MapOneDoor_2
+    second: WorldOneHoleB
   - first:
       213: -3679733267116199293
     second: MapOneWall_8
@@ -55,22 +55,22 @@ TextureImporter:
     second: MapOneFloorDG_1
   - first:
       213: -2252579517654919330
-    second: mainlevbuild_17
+    second: MapOneFront2
   - first:
       213: 6226702988855111956
     second: MapOneSewerLB
   - first:
       213: -4697650317462834917
-    second: mainlevbuild_19
+    second: MapOneWall_2
   - first:
       213: -6594178671280562777
     second: MapOneDoor_3
   - first:
       213: -898266508491088363
-    second: MapOneDoor_4
+    second: WorldOneHoleBL
   - first:
       213: -3248334058349396385
-    second: MapOneDoor_5
+    second: MapOneLCorner
   - first:
       213: -9115494449990103297
     second: MapOneDoor_9
@@ -197,6 +197,78 @@ TextureImporter:
   - first:
       213: 4198835716397797896
     second: MapOneSewerRS
+  - first:
+      213: -2188923288898987827
+    second: MapOneRCorner
+  - first:
+      213: 2832461173733039115
+    second: WorldOneHoleL
+  - first:
+      213: 7097634703160681251
+    second: WorldOneHoleM
+  - first:
+      213: -8823722090654254923
+    second: MapOneWallR_1
+  - first:
+      213: 5981800252108750602
+    second: MapOneGroundDB_1
+  - first:
+      213: 2872770103191652374
+    second: MapOneWallL_1
+  - first:
+      213: -3905130606289811855
+    second: MapOneWall_6
+  - first:
+      213: -5052328825410608781
+    second: MapOneWallR__2
+  - first:
+      213: 7528192680436873960
+    second: MapOneBackM_4
+  - first:
+      213: 3044398042023039788
+    second: MapOneBackM_5
+  - first:
+      213: -5859953615625687969
+    second: MapOneFrontL
+  - first:
+      213: -5665889735847176292
+    second: MapOneFrontR
+  - first:
+      213: 4436442633588373683
+    second: MapOneFront3
+  - first:
+      213: 7108238209999571957
+    second: MapOneBackM_2
+  - first:
+      213: -5972382954435024299
+    second: MapOneBackM_3
+  - first:
+      213: -4416573742348504861
+    second: MapOneBackR
+  - first:
+      213: 4570965039170396820
+    second: MapOneBackL
+  - first:
+      213: 4892651753380666845
+    second: MapOneBackM_1
+  - first:
+      213: -1571162407955928237
+    second: MapOneR_2
+  - first:
+      213: 3089804333611735866
+    second: MapOneL_2
+  - first:
+      213: 4783341431356594539
+    second: WorldOneHoleR
+  - first:
+      213: 5711493614962157448
+    second: WorldOneHoleTR
+  - first:
+      213: -4030473950021665116
+    second: WorldOneHoleT
+  - first:
+      213: 1234989179834328531
+    second: WorldOneHoleTL
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -301,33 +373,12 @@ TextureImporter:
       name: MapOneWall_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 736
-        width: 384
-        height: 288
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 756512ba635d03af0800000000000000
-      internalID: -418600334569417129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapOneWall_2
-      rect:
-        serializedVersion: 2
-        x: 408
+        x: 416
         y: 826
-        width: 116
-        height: 171
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 64
+        height: 70
+      alignment: 9
+      pivot: {x: 0.25, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,9 +397,9 @@ TextureImporter:
         x: 544
         y: 919
         width: 64
-        height: 73
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -361,15 +412,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapOneWall_5
+      name: MapOneWallL_2
       rect:
         serializedVersion: 2
         x: 629
-        y: 889
-        width: 182
-        height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 928
+        width: 43
+        height: 64
+      alignment: 9
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -382,36 +433,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapOneWall_7
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 887
-        width: 192
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd693f7c5913f76b0800000000000000
-      internalID: -5296460117389895971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: MapOneWall_4
       rect:
         serializedVersion: 2
-        x: 545
+        x: 544
         y: 826
         width: 64
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -419,48 +449,6 @@ TextureImporter:
       bones: []
       spriteID: bd04343c6e831f790800000000000000
       internalID: -7498149340825567013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapOneDoor_1
-      rect:
-        serializedVersion: 2
-        x: 711
-        y: 793
-        width: 48
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 712d8e3ba8c812a30800000000000000
-      internalID: 4188783655783027223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapOneDoor_2
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 795
-        width: 64
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e3a5639806b52b30800000000000000
-      internalID: 4262012770324947943
       vertices: []
       indices: 
       edges: []
@@ -494,8 +482,8 @@ TextureImporter:
         y: 448
         width: 256
         height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.065, y: 0.9375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -634,27 +622,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainlevbuild_17
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 27
-        width: 136
-        height: 140
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e579bd50dda3db0e0800000000000000
-      internalID: -2252579517654919330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: MapOneSewerLB
       rect:
         serializedVersion: 2
@@ -682,9 +649,9 @@ TextureImporter:
         x: 832
         y: 761
         width: 64
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 76
+      alignment: 9
+      pivot: {x: 0.25, y: 0.31}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -697,34 +664,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapOneDoor_4
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 761
-        width: 64
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51e12c7ae57b883f0800000000000000
-      internalID: -898266508491088363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapOneDoor_5
+      name: MapOneLCorner
       rect:
         serializedVersion: 2
         x: 960
-        y: 761
-        width: 63
-        height: 102
+        y: 768
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1394,9 +1340,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 129
+        y: 128
         width: 32
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1460,8 +1406,8 @@ TextureImporter:
         y: 704
         width: 64
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1477,12 +1423,12 @@ TextureImporter:
       name: MapOneBigFloorLB
       rect:
         serializedVersion: 2
-        x: 768
+        x: 766
         y: 512
-        width: 191
+        width: 192
         height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.08, y: 0.92}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1498,8 +1444,8 @@ TextureImporter:
       name: MapOneGroundLB_1
       rect:
         serializedVersion: 2
-        x: 800
-        y: 448
+        x: 801
+        y: 449
         width: 64
         height: 64
       alignment: 0
@@ -1544,8 +1490,8 @@ TextureImporter:
         y: 192
         width: 256
         height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.065, y: 0.9375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1565,8 +1511,8 @@ TextureImporter:
         y: 256
         width: 192
         height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.08, y: 0.92}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1637,6 +1583,468 @@ TextureImporter:
       bones: []
       spriteID: 8021d1276d2454a30800000000000000
       internalID: 4198835716397797896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 826
+        width: 32
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.315}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1170acece79eceb0800000000000000
+      internalID: -4697650317462834917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneRCorner
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 768
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8989cbdd16f91e0800000000000000
+      internalID: -2188923288898987827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneGroundDB_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fb848e2af930350800000000000000
+      internalID: 5981800252108750602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWallR_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 898
+        width: 42
+        height: 64
+      alignment: 9
+      pivot: {x: 0.38, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b839c53287db8580800000000000000
+      internalID: -8823722090654254923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWallL_1
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 896
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.81, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618c91230312ed720800000000000000
+      internalID: 2872770103191652374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_5
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 887
+        width: 32
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5, y: 0.342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd693f7c5913f76b0800000000000000
+      internalID: -5296460117389895971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_6
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 887
+        width: 64
+        height: 73
+      alignment: 9
+      pivot: {x: 0.25, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176079267603ec9c0800000000000000
+      internalID: -3905130606289811855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWallR__2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 928
+        width: 43
+        height: 64
+      alignment: 9
+      pivot: {x: 0.38, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3712fe0a3b582e9b0800000000000000
+      internalID: -5052328825410608781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 960
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eab2265b53897860800000000000000
+      internalID: 7528192680436873960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_5
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 960
+        width: 64
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c239da9a3efdf3a20800000000000000
+      internalID: 3044398042023039788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFrontL
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 800
+        width: 64
+        height: 80
+      alignment: 9
+      pivot: {x: 0.25, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c6d54eb334daea0800000000000000
+      internalID: -5859953615625687969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFrontR
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 800
+        width: 64
+        height: 80
+      alignment: 9
+      pivot: {x: 0.75, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c971c4eed47be51b0800000000000000
+      internalID: -5665889735847176292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFront2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e579bd50dda3db0e0800000000000000
+      internalID: -2252579517654919330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFront3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8fe69e119619d30800000000000000
+      internalID: 4436442633588373683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 962
+        width: 64
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0.31}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb02edadf885a260800000000000000
+      internalID: 7108238209999571957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 32
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a6d429855dd1da0800000000000000
+      internalID: -5972382954435024299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackR
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 920
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0.62, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0fff2d49d25b2c0800000000000000
+      internalID: -4416573742348504861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackL
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 920
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0.38, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4922b703c745f6f30800000000000000
+      internalID: 4570965039170396820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 896
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd52f9e8d036e340800000000000000
+      internalID: 4892651753380666845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneR_2
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 890
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35be6554d1c123ae0800000000000000
+      internalID: -1571162407955928237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneL_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 890
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bd362cba031ea20800000000000000
+      internalID: 3089804333611735866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBlackBg
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 897
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756512ba635d03af0800000000000000
+      internalID: -418600334569417129
       vertices: []
       indices: 
       edges: []

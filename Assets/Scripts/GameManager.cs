@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance = null;
+
     [Header("Character Stats")] //Used to retrieve player's stat values
     private int playerHP;
     [SerializeField] private int playerMAXHP; //Highest HP the player can have at any one time.
@@ -14,6 +16,15 @@ public class GameManager : MonoBehaviour
     private int playerSP = 3; //Number of stat points player has. ---- "3" hardcoded for testing. !Remove after!
     private int playerLvl; //Level of player
 
+
+    //Sorting order variables
+    [SerializeField] private int sortingOrderBase = 5000;
+    [SerializeField] private int scalingOrder = 100;
+    [SerializeField] private int offset = 0;
+    [SerializeField] public int NbMapTemplates = 0;
+
+
+    //Encapsulation
     public int PlayerHP { get => playerHP; set => playerHP = value; }
     public int PlayerMAXHP { get => playerMAXHP; set => playerMAXHP = value; }
     public int PlayerArmor { get => playerArmor; set => playerArmor = value; }
@@ -22,17 +33,22 @@ public class GameManager : MonoBehaviour
     public float PlayerRSpeed { get => playerRSpeed; set => playerRSpeed = value; }
     public int PlayerSP { get => playerSP; set => playerSP = value; }
     public int PlayerLvl { get => playerLvl; set => playerLvl = value; }
+    public int SortingOrderBase {get => sortingOrderBase;}
+    public int ScalingOrder {get => scalingOrder;}
+    public int Offset {get => offset;}
 
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake() //Singleton to assure that we only have one instance of GameManager
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
