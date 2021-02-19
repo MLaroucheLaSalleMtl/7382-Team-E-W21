@@ -1,7 +1,274 @@
 fileFormatVersion: 2
 guid: c80a86b3107d3424c993e3b85f54b912
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -418600334569417129
+    second: MapOneBlackBg
+  - first:
+      213: -5727760111797192145
+    second: MapOneWall_1
+  - first:
+      213: 4011826581710594722
+    second: MapOneWall_3
+  - first:
+      213: -2921649638176895635
+    second: MapOneWallL_2
+  - first:
+      213: -5296460117389895971
+    second: MapOneWall_5
+  - first:
+      213: -7498149340825567013
+    second: MapOneWall_4
+  - first:
+      213: 4188783655783027223
+    second: WorldOneHoleBR
+  - first:
+      213: 4262012770324947943
+    second: WorldOneHoleB
+  - first:
+      213: -3679733267116199293
+    second: MapOneWall_8
+  - first:
+      213: 7759064944903599796
+    second: MapOneBigGrassFloorLB
+  - first:
+      213: 7849981455521004453
+    second: MapOneFloorLB_2
+  - first:
+      213: 4862577987027710429
+    second: MapOneFloorLB_1
+  - first:
+      213: -5629698620501372720
+    second: MapOneFloorDB_1
+  - first:
+      213: -8026734006290447909
+    second: MapOneHole_1
+  - first:
+      213: 9052083678068739164
+    second: MapOneHole_2
+  - first:
+      213: 8663717305663940273
+    second: MapOneFloorRS_1
+  - first:
+      213: -2593568489711789508
+    second: MapOneFloorDG_1
+  - first:
+      213: -2252579517654919330
+    second: MapOneFront2
+  - first:
+      213: 6226702988855111956
+    second: MapOneSewerLB
+  - first:
+      213: -4697650317462834917
+    second: MapOneWall_2
+  - first:
+      213: -6594178671280562777
+    second: MapOneDoor_3
+  - first:
+      213: -898266508491088363
+    second: WorldOneHoleBL
+  - first:
+      213: -3248334058349396385
+    second: MapOneLCorner
+  - first:
+      213: -9115494449990103297
+    second: MapOneDoor_9
+  - first:
+      213: 6420727695496351146
+    second: MapOneDoor_10
+  - first:
+      213: -1602463451461582043
+    second: MapOneInFloorLB_3
+  - first:
+      213: 3689678004797401271
+    second: MapOneFloorLB_4
+  - first:
+      213: -1941847486174947609
+    second: MapOneFloorLB_5
+  - first:
+      213: -2824339273499651401
+    second: MapOneFloorLB_6
+  - first:
+      213: -8429205204603446322
+    second: MapOneFloorLB_7
+  - first:
+      213: 8768440425142752653
+    second: MapOneFloorLB_8
+  - first:
+      213: 4408563769535370717
+    second: MapOneFloorLB_9
+  - first:
+      213: 7709999835353539182
+    second: MapOneFloorDB_2
+  - first:
+      213: -235880382000146013
+    second: MapOneFloorDB_3
+  - first:
+      213: 8738420372347068404
+    second: MapOneFloorDB_4
+  - first:
+      213: -1738952003001450570
+    second: MapOneFloorDB_5
+  - first:
+      213: -508832943575404403
+    second: MapOneFloorDB_6
+  - first:
+      213: -6847793319153235135
+    second: MapOneFloorDB_7
+  - first:
+      213: -1703218779116828949
+    second: MapOneFloorDB_8
+  - first:
+      213: -6978136671512635147
+    second: MapOneFloorDB_9
+  - first:
+      213: -5580178051479784154
+    second: MapOneFloorRS_2
+  - first:
+      213: -4585072949944894917
+    second: MapOneFloorRS_3
+  - first:
+      213: -5820360885964414978
+    second: MapOneFloorRS_4
+  - first:
+      213: 1453184701218036082
+    second: MapOneFloorRS_5
+  - first:
+      213: 6862000540387573597
+    second: MapOneFloorRS_6
+  - first:
+      213: 8022921440793764292
+    second: MapOneFloorRS_7
+  - first:
+      213: 2355887969100071470
+    second: MapOneFloorRS_8
+  - first:
+      213: -291526051471725722
+    second: MapOneFloorRS_9
+  - first:
+      213: -4619280345969563776
+    second: MapOneFloorDG_2
+  - first:
+      213: 1255356085234128013
+    second: MapOneFloorDG_3
+  - first:
+      213: -758095170122577706
+    second: MapOneFloorDG_4
+  - first:
+      213: -2325699701033483723
+    second: MapOneFloorDG_5
+  - first:
+      213: -4031146520388835426
+    second: MapOneFloorDG_6
+  - first:
+      213: 4256329747719841554
+    second: MapOneFloorDG_7
+  - first:
+      213: 8353016380883712464
+    second: MapOneFloorDG_8
+  - first:
+      213: -5947681416826634311
+    second: MapOneFloorDG_9
+  - first:
+      213: 4778794286218837914
+    second: MapOneDoor_6
+  - first:
+      213: 742475946954001709
+    second: MapOneBigFloorLB
+  - first:
+      213: 1569051132913048003
+    second: MapOneGroundLB_1
+  - first:
+      213: -2180457891328654851
+    second: MapOneGroundLB_2
+  - first:
+      213: -6871419746954505778
+    second: MapOneBigGrassFloorDB
+  - first:
+      213: 1342668001968994181
+    second: MapOneBigFloorDB
+  - first:
+      213: -6620768258802225657
+    second: MapOneGroundDB_2
+  - first:
+      213: -4869326712624427044
+    second: MapOneSewerDB
+  - first:
+      213: 4198835716397797896
+    second: MapOneSewerRS
+  - first:
+      213: -2188923288898987827
+    second: MapOneRCorner
+  - first:
+      213: 2832461173733039115
+    second: WorldOneHoleL
+  - first:
+      213: 7097634703160681251
+    second: WorldOneHoleM
+  - first:
+      213: -8823722090654254923
+    second: MapOneWallR_1
+  - first:
+      213: 5981800252108750602
+    second: MapOneGroundDB_1
+  - first:
+      213: 2872770103191652374
+    second: MapOneWallL_1
+  - first:
+      213: -3905130606289811855
+    second: MapOneWall_6
+  - first:
+      213: -5052328825410608781
+    second: MapOneWallR__2
+  - first:
+      213: 7528192680436873960
+    second: MapOneBackM_4
+  - first:
+      213: 3044398042023039788
+    second: MapOneBackM_5
+  - first:
+      213: -5859953615625687969
+    second: MapOneFrontL
+  - first:
+      213: -5665889735847176292
+    second: MapOneFrontR
+  - first:
+      213: 4436442633588373683
+    second: MapOneFront3
+  - first:
+      213: 7108238209999571957
+    second: MapOneBackM_2
+  - first:
+      213: -5972382954435024299
+    second: MapOneBackM_3
+  - first:
+      213: -4416573742348504861
+    second: MapOneBackR
+  - first:
+      213: 4570965039170396820
+    second: MapOneBackL
+  - first:
+      213: 4892651753380666845
+    second: MapOneBackM_1
+  - first:
+      213: -1571162407955928237
+    second: MapOneR_2
+  - first:
+      213: 3089804333611735866
+    second: MapOneL_2
+  - first:
+      213: 4783341431356594539
+    second: WorldOneHoleR
+  - first:
+      213: 5711493614962157448
+    second: WorldOneHoleTR
+  - first:
+      213: -4030473950021665116
+    second: WorldOneHoleT
+  - first:
+      213: 1234989179834328531
+    second: WorldOneHoleTL
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +308,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +342,1713 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MapOneWall_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 826
+        width: 64
+        height: 70
+      alignment: 9
+      pivot: {x: 0.25, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a3da97688e280b0800000000000000
+      internalID: -5727760111797192145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_3
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 919
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2645f350fdca730800000000000000
+      internalID: 4011826581710594722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWallL_2
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 928
+        width: 43
+        height: 64
+      alignment: 9
+      pivot: {x: 0.63, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d415632273477d0800000000000000
+      internalID: -2921649638176895635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_4
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 826
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd04343c6e831f790800000000000000
+      internalID: -7498149340825567013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 731
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382f951f616feecc0800000000000000
+      internalID: -3679733267116199293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBigGrassFloorLB
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.065, y: 0.9375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b63a26457cbdab60800000000000000
+      internalID: 7759064944903599796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1bb698ae85b7340800000000000000
+      internalID: 4862577987027710429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0528c9eea4fd1b0800000000000000
+      internalID: -5629698620501372720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneHole_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd18280e2ff4b9090800000000000000
+      internalID: -8026734006290447909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneHole_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c066c25267f9d70800000000000000
+      internalID: 9052083678068739164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6e086bcf4bb3870800000000000000
+      internalID: 8663717305663940273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a151e233bc10cd0800000000000000
+      internalID: -2593568489711789508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneSewerLB
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411729cb061b96650800000000000000
+      internalID: 6226702988855111956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneDoor_3
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 761
+        width: 64
+        height: 76
+      alignment: 9
+      pivot: {x: 0.25, y: 0.31}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad5dd89f65cc74a0800000000000000
+      internalID: -6594178671280562777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneLCorner
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ef74462699be2d0800000000000000
+      internalID: -3248334058349396385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneDoor_9
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 731
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe8b4cf7124f7180800000000000000
+      internalID: -9115494449990103297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneDoor_10
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 731
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad829112d10b1950800000000000000
+      internalID: 6420727695496351146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abbbb5fa8cb0fc60800000000000000
+      internalID: 7849981455521004453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneInFloorLB_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523061a2bf7e2c9e0800000000000000
+      internalID: -1602463451461582043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8658bb89e543330800000000000000
+      internalID: 3689678004797401271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_5
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e69e8aeffb2d05e0800000000000000
+      internalID: -1941847486174947609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b25edd056eedc8d0800000000000000
+      internalID: -2824339273499651401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbdcb8b682750b80800000000000000
+      internalID: -8429205204603446322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d851fc60c12cfa970800000000000000
+      internalID: 8768440425142752653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorLB_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd510dc046d5e2d30800000000000000
+      internalID: 4408563769535370717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62619c300c6ffa60800000000000000
+      internalID: 7709999835353539182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9d565da0cf9bcf0800000000000000
+      internalID: -235880382000146013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff98cfc70b154970800000000000000
+      internalID: 8738420372347068404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bff4abdd500ed7e0800000000000000
+      internalID: -1738952003001450570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80fb2c322340f8f0800000000000000
+      internalID: -508832943575404403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b0494e140c7f0a0800000000000000
+      internalID: -6847793319153235135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be687ff5b83fc58e0800000000000000
+      internalID: -1703218779116828949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDB_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8dc544bada82f90800000000000000
+      internalID: -6978136671512635147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625bd1290a93f82b0800000000000000
+      internalID: -5580178051479784154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a384dd17c8e50c0800000000000000
+      internalID: -4585072949944894917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff538f9c9ce93fa0800000000000000
+      internalID: -5820360885964414978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_5
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279122559cfba2410800000000000000
+      internalID: 1453184701218036082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ff6529229ba3f50800000000000000
+      internalID: 6862000540387573597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1a06b0b84275f60800000000000000
+      internalID: 8022921440793764292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2283d830abc1b020800000000000000
+      internalID: 2355887969100071470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorRS_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b614bc99a44fbf0800000000000000
+      internalID: -291526051471725722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0876a84dff405efb0800000000000000
+      internalID: -4619280345969563776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84510755bbeb6110800000000000000
+      internalID: 1255356085234128013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d887e69574ba75f0800000000000000
+      internalID: -758095170122577706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532caa9a17479bfd0800000000000000
+      internalID: -2325699701033483723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97ebaef89d7e08c0800000000000000
+      internalID: -4031146520388835426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217e4c3ca55811b30800000000000000
+      internalID: 4256329747719841554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9b7996420ebe370800000000000000
+      internalID: 8353016380883712464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFloorDG_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf3bd87347957da0800000000000000
+      internalID: -5947681416826634311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneDoor_6
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 704
+        width: 64
+        height: 37
+      alignment: 9
+      pivot: {x: 0.25, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f7dbc8510b15240800000000000000
+      internalID: 4778794286218837914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBigFloorLB
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 512
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.08, y: 0.92}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d0770a0fdcd4a00800000000000000
+      internalID: 742475946954001709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneGroundLB_1
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 449
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9d4b331b366c510800000000000000
+      internalID: 1569051132913048003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneGroundLB_2
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df188a3b9157db1e0800000000000000
+      internalID: -2180457891328654851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBigGrassFloorDB
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.065, y: 0.9375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec11c208520d3a0a0800000000000000
+      internalID: -6871419746954505778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBigFloorDB
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.08, y: 0.92}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58735ac1f6d12a210800000000000000
+      internalID: 1342668001968994181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneGroundDB_2
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e69e1d85e4e14a0800000000000000
+      internalID: -6620768258802225657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneSewerDB
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf43b6572dac6cb0800000000000000
+      internalID: -4869326712624427044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneSewerRS
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8021d1276d2454a30800000000000000
+      internalID: 4198835716397797896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 826
+        width: 32
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.315}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1170acece79eceb0800000000000000
+      internalID: -4697650317462834917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneRCorner
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 768
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8989cbdd16f91e0800000000000000
+      internalID: -2188923288898987827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneGroundDB_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fb848e2af930350800000000000000
+      internalID: 5981800252108750602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWallR_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 898
+        width: 42
+        height: 64
+      alignment: 9
+      pivot: {x: 0.38, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b839c53287db8580800000000000000
+      internalID: -8823722090654254923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWallL_1
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 896
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.81, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618c91230312ed720800000000000000
+      internalID: 2872770103191652374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_5
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 887
+        width: 32
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5, y: 0.342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd693f7c5913f76b0800000000000000
+      internalID: -5296460117389895971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWall_6
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 887
+        width: 64
+        height: 73
+      alignment: 9
+      pivot: {x: 0.25, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176079267603ec9c0800000000000000
+      internalID: -3905130606289811855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneWallR__2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 928
+        width: 43
+        height: 64
+      alignment: 9
+      pivot: {x: 0.38, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3712fe0a3b582e9b0800000000000000
+      internalID: -5052328825410608781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 960
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eab2265b53897860800000000000000
+      internalID: 7528192680436873960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_5
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 960
+        width: 64
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c239da9a3efdf3a20800000000000000
+      internalID: 3044398042023039788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFrontL
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 800
+        width: 64
+        height: 80
+      alignment: 9
+      pivot: {x: 0.25, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c6d54eb334daea0800000000000000
+      internalID: -5859953615625687969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFrontR
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 800
+        width: 64
+        height: 80
+      alignment: 9
+      pivot: {x: 0.75, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c971c4eed47be51b0800000000000000
+      internalID: -5665889735847176292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFront2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e579bd50dda3db0e0800000000000000
+      internalID: -2252579517654919330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneFront3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8fe69e119619d30800000000000000
+      internalID: 4436442633588373683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 962
+        width: 64
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0.31}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb02edadf885a260800000000000000
+      internalID: 7108238209999571957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 32
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a6d429855dd1da0800000000000000
+      internalID: -5972382954435024299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackR
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 920
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0.62, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0fff2d49d25b2c0800000000000000
+      internalID: -4416573742348504861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackL
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 920
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0.38, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4922b703c745f6f30800000000000000
+      internalID: 4570965039170396820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBackM_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 896
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd52f9e8d036e340800000000000000
+      internalID: 4892651753380666845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneR_2
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 890
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35be6554d1c123ae0800000000000000
+      internalID: -1571162407955928237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneL_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 890
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bd362cba031ea20800000000000000
+      internalID: 3089804333611735866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapOneBlackBg
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 897
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756512ba635d03af0800000000000000
+      internalID: -418600334569417129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
