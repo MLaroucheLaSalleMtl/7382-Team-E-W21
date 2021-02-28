@@ -283,8 +283,8 @@ TextureImporter:
       name: Idle_8
       rect:
         serializedVersion: 2
-        x: 738
-        y: 31
+        x: 737
+        y: 32
         width: 51
         height: 45
       alignment: 7
