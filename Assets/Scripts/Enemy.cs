@@ -56,8 +56,25 @@ public class Enemy : MonoBehaviour
     private float retreatTimer; //timer that goes up for every time.deltaTime spent retreating
     private float retreatCDTimer; //timer for the retreat cooldown, when it reaches same value or higher of retreatCooldown, this enemy can retreat again
     private float attackTimer; //timer that goes up for every time.deltaTime spent attacking
-    private float attackCDTimer; //timer for the attack cooldown, when it reaches same value or higher of attackCooldown, this enemy can attack again
+    private float attackCDTimer; //timer for the attack cooldown, when it reaches same value or higher of attackCooldown, this enemy can attack again\
+
+   
+
     
+    [Header ("Other Properties")]
+     // -------ZoneController--------
+    [SerializeField] private GameObject parentRoom;
+    // ----- Collider Ignore ------
+    // [Tooltip ("Provide both a kinematic and a dynamic RigidBody2D to prevent player from pushing this object")]
+    // [SerializeField] private Collider2D colA;
+    // [Tooltip ("Provide both a kinematic and a dynamic RigidBody2D to prevent player from pushing this object")]
+    // [SerializeField] private Collider2D colB;
+
+    [Tooltip ("Offset center if pivot is somewhere else (caused by sprite cutting and to maintain consistency of animation")]
+    [SerializeField] private Vector3 newCenter;
+
+
+    //Ming
 
 
     // Start is called before the first frame update
@@ -67,10 +84,13 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player"); //Cache player Game Object
         retreatReset = 0f;
         distance = 0f;
-        headpos = attackStart.transform.localPosition.x;        
-    }    
-    
-    private void TakeDMG(int pdmg) //Method called to reduce HP value when hit by player
+        headpos = attackStart.transform.localPosition.x;
+        parentRoom.GetComponent<Map>().AddMonster();
+        //Physics2D.IgnoreCollision(colA,colB);
+    }	
+	
+
+	public void TakeDMG(int pdmg) //Method called to reduce HP value when hit by player
     {
         this.HP -= pdmg; //Reduce HP by pdmg(player dmg/atk value)
         //if this unit's HP is 0 or below, it is considered dead and triggers the death animation
@@ -78,21 +98,68 @@ public class Enemy : MonoBehaviour
         {
             animator.SetBool("Dead", true);
         }
+        Debug.Log($"{gameObject.name} took + {pdmg} dmg");
     }
+
+    
 
     public void Dead()  //Destroy this object when HP is 0 and increase player EXP; Called at end of Death Animation
     {
-        
+        parentRoom.GetComponent<Map>().ReduceMonster();
         GameManager.instance.AddExp(this.EXP);
+        animator.SetBool("Walk", false);
+        animator.SetBool("Dead", false);
         Destroy(this.gameObject);
+        //Ming
+        //int randowm = RandomNumGenerator(0, 5);
+        Debug.Log("it is dead");
+        ItemDrop();
+        
     }
 
+    //Ming
+    int RandomNumGenerator(int from, int to)
+	{
+        int random = Random.Range(from, to);
+        return random;
+    }
+    void ItemDrop()
+	{
+        Debug.Log("drop method runs");
+        if(RandomNumGenerator(0,101)<90)
+		{
+            GameObject C0 = Instantiate(GameObject.Find("Item Asset").GetComponent<ItemAssets>().Pill, this.gameObject.GetComponent<Transform>().position, this.gameObject.GetComponent<Transform>().rotation );
+		}
+        /*else if(RandomNumGenerator(0,101)<50)
+		{
+            switch (RandomNumGenerator(0,4))
+			{
+                case 0:
+                    GameObject WP0 = Instantiate(GameObject.Find("Item Asset").GetComponent<ItemAssets>().Pistol, this.gameObject.GetComponent<Transform>().position, this.gameObject.GetComponent<Transform>().rotation);
+                    break;
+                case 1:
+                    GameObject WAR0 = Instantiate(GameObject.Find("Item Asset").GetComponent<ItemAssets>().AR, this.gameObject.GetComponent<Transform>().position, this.gameObject.GetComponent<Transform>().rotation);
+                    break;
+                case 2:
+                    GameObject WS0 = Instantiate(GameObject.Find("Item Asset").GetComponent<ItemAssets>().Shotgun, this.gameObject.GetComponent<Transform>().position, this.gameObject.GetComponent<Transform>().rotation);
+                    break;
+                case 3:
+                    GameObject WSR0 = Instantiate(GameObject.Find("Item Asset").GetComponent<ItemAssets>().SniperR, this.gameObject.GetComponent<Transform>().position, this.gameObject.GetComponent<Transform>().rotation);
+                    break;
+                
+            }
+		}*/
+	}
     private void getDistance() //Method to update distance variable, also used to determine whether player has entered the detection range of the enemy
     {
-        //Calculate current distance between this unit and the player
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        //If the distance is smaller or equal to its detection range, this unit has thus detected the player
-        animator.SetBool("Detected", (distance <= this.detectRange)?true:false);
+        if (this.gameObject.GetComponent<Animator>().GetBool("Dead") != true)//modified
+		{
+            //Calculate current distance between this unit and the player
+            distance = Vector2.Distance(transform.position, player.transform.position);
+            //If the distance is smaller or equal to its detection range, this unit has thus detected the player
+            animator.SetBool("Detected", (distance <= this.detectRange) ? true : false);
+        }
+            
         
     }
 
@@ -113,12 +180,7 @@ public class Enemy : MonoBehaviour
             //if attacking for too long, stop attacking and enter attack cooldown
             attackCDTimer += Time.deltaTime;
             animator.SetBool("Attack", false);
-            animator.SetBool("AttackCooldown", true);
-            //for melee units
-            // if(melee == true && attackStart.activeSelf)
-            // {
-            //     attackStart.SetActive(false); //turn off hitbox trigger after attacking if it isnt already off
-            // }   
+            animator.SetBool("AttackCooldown", true);            
         }
         if(attackCDTimer >= attackCooldown) //Reset all parameter variables needed to perform an attack
         {
@@ -130,35 +192,12 @@ public class Enemy : MonoBehaviour
 
     
     private void Walk() //Change enemy position in scene in accordance to player position
-    {
-
-        // if (distance <= stopRange && distance > retreatRange) //Stop moving if in attack range, and not in retreat range
-        // {
-        //     transform.position = this.transform.position;
-        //     animator.SetBool("Walk", false); //Stop walking animation, will transition to idle animation, then eventually attack animation
-        //     animator.SetBool("Attack", true);
-        //     retreat = false;
-        // }
-        // else if (distance < retreatRange) //Retreat if player is too close
-        // {
-
-        //     transform.position = Vector2.MoveTowards(transform.position, player.transform.position, -Speed*Time.deltaTime);
-        //     if(animator.GetBool("Attack")){animator.SetBool("Attack",false);}
-        //     animator.SetBool("Walk",true); //Begin walking animation
-        //     retreat = true;
-        // }
-        // else if (distance > attackRange) //Move towards player if not in attack range
-        // {
-        //     transform.position = Vector2.MoveTowards(transform.position, player.transform.position, Speed*Time.deltaTime);
-        //     if(animator.GetBool("Attack")){animator.SetBool("Attack",false);}
-        //     animator.SetBool("Walk",true); //Begin walking animation
-        //     retreat = false;
-        // }
-        if (animator.GetBool("Detected"))
+    {        
+        if (animator.GetBool("Detected")&&animator.GetBool("Dead")!=true)//modified
         {
-            if (distance > attackRange) //Detected the player and the player is not within attack range, move towards player
+            if (distance > attackRange && !animator.GetBool("Attack")) //Detected the player and the player is not within attack range, move towards player
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position,Speed*Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position+newCenter,Speed*Time.deltaTime);
                 animator.SetBool("Walk", true);
                 retreat = false;
                 if(animator.GetBool("Attack")){animator.SetBool("Attack", false);}
@@ -172,7 +211,7 @@ public class Enemy : MonoBehaviour
             }
             else if (distance < retreatRange && !animator.GetBool("Attack")) //Retreat
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, -Speed*Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position+newCenter, -Speed*Time.deltaTime);
                 animator.SetBool("Walk", true);
                 animator.SetBool("Attack", false);
                 retreat = true;
@@ -183,23 +222,29 @@ public class Enemy : MonoBehaviour
 
     private void _RetreatTimer()
     {
-        if(retreat == true && retreatCDTimer == 0)
+        if (animator.GetBool("Dead") != true)//modified
         {
-            retreatTimer+=Time.deltaTime;
+            if (retreat == true && retreatCDTimer == 0)
+            {
+                retreatTimer += Time.deltaTime;
+            }
+            if (retreat == true && retreatTimer >= retreatReset)
+            {
+                retreatCDTimer += Time.deltaTime;
+                retreat = false;
+            }
+            if (retreatCDTimer >= retreatCooldown)
+            {
+                retreatTimer = retreatCDTimer = 0;
+            }
         }
-        if(retreat == true && retreatTimer >= retreatReset)
-        {
-            retreatCDTimer += Time.deltaTime;
-            retreat = false;
-        }
-        if(retreatCDTimer >= retreatCooldown)
-        {
-            retreatTimer = retreatCDTimer = 0;
-        }
+        
+            
     }
 
     private void FlipSprite()
     {
+
         SpriteRenderer sprite = this.gameObject.GetComponent<SpriteRenderer>(); //Reference to this object's Sprite
         float flip = transform.position.x - player.transform.position.x;
         
@@ -209,7 +254,8 @@ public class Enemy : MonoBehaviour
         attackStart.transform.localPosition = new Vector3((flip < 0)?headpos:-headpos,attackStart.transform.localPosition.y,0f);       
         
     }
-
+     
+     
     // Update is called once per frame
     void Update()
     {

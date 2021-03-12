@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: AR
   m_EditorClassIdentifier: 
   itemName: Assualt Rilfe
-  itemDes: an AR
+  itemDes: What is more you can ask for?
+  Dmg: 3
+  price: 500
+  effect_value: 0
   itemSprite: {fileID: 21300000, guid: 145af36a074d76241b467d9caf1910dc, type: 3}
-  itemType: 1
+  itemType: 2
+  Code: Item_WAR0_AR

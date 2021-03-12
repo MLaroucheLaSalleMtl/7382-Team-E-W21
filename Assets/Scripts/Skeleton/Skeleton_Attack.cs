@@ -17,6 +17,7 @@ public class Skeleton_Attack : MonoBehaviour
     {
         //hitbox.SetActive(false);
         parent = gameObject.GetComponentInParent<Animator>();
+        inZone = null;
     }
     
     // private void OnTriggerStay2D(Collider2D other) 
@@ -37,10 +38,15 @@ public class Skeleton_Attack : MonoBehaviour
         }
     }
 
+    // public void toggleMelee()
+    // {
+    //     hitbox.SetActive((hitbox.activeSelf)?false:true);
+    // }
     public void _MeleeHit()
     {
-        inZone.gameObject.BroadcastMessage("PlayerHit", damage);
+        inZone.gameObject.BroadcastMessage("PlayerHit", damage);    
     }
+
 
     private void OnTriggerExit2D(Collider2D other) 
     {
@@ -49,4 +55,6 @@ public class Skeleton_Attack : MonoBehaviour
             inZone = null;
         }
     }
+
+    
 }

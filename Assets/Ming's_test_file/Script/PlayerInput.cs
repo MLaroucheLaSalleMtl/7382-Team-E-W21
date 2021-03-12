@@ -13,7 +13,7 @@ public class PlayerInput : MonoBehaviour
 	//public Transform firePoint;
 
 	//string Current_weapon="Pistol";
-	string Current_weapon = "Shotgun";
+	public string Current_weapon = "Shotgun";
 	//public string Current_weapon = "AR";
 	//string Current_weapon = "SniperR";
 	bool fire = false;
@@ -28,9 +28,12 @@ public class PlayerInput : MonoBehaviour
 	//[SerializeField] private GameObject uiInventory_gameobject;
 	//Inventory inventory;
 
+	//Chris
+	private Vector3 _localpos;
+
 	void Start()
     {
-        
+        _localpos = gameObject.transform.localPosition;
     }
 
     private void Awake()
@@ -59,7 +62,7 @@ public class PlayerInput : MonoBehaviour
 
 		
 		shoot(Current_weapon);
-		if(fire)
+		if (Input.GetKeyDown(KeyCode.Mouse0))
         {
 			if(Current_weapon== "Pistol")
             {
@@ -104,9 +107,6 @@ public class PlayerInput : MonoBehaviour
 
 		Dash(player, look_dir);
 
-
-
-
 		Throw(look_dir);
 		
 	}
@@ -115,7 +115,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (collision.tag == "Item")
 		{
-			//gameManager.AddItem()£»
+			//gameManager.AddItem()ï¿½ï¿½
 			//instantisate pick effect here
 			Destroy(gameObject);
 		}
@@ -212,6 +212,7 @@ public class PlayerInput : MonoBehaviour
 			Debug.Log("AR shoot");
 		}
 	}
+
 	private void DropItem(GameObject player)
 	{
 		//if (Input.GetKey(KeyCode.T))// & player.item_on_hold != null)
@@ -228,7 +229,6 @@ public class PlayerInput : MonoBehaviour
 
 		//}
 	}
-
 	private void Dash(GameObject player,Vector2 lookDir)
 	{
 		//if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))// & player.DashTF = true)
@@ -292,7 +292,10 @@ public class PlayerInput : MonoBehaviour
 	}
 
 
-
+	void keepLocal()
+	{
+		gameObject.transform.localPosition = _localpos;
+	}
 
 
 

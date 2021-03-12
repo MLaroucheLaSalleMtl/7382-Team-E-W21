@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3757092041286405062}
   - component: {fileID: 3697967789243832216}
   - component: {fileID: 5868937211651926835}
-  - component: {fileID: 1278692664719202881}
+  - component: {fileID: 435127150654714034}
   m_Layer: 0
   m_Name: MapOneDoorTop
   m_TagString: Untagged
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.49999997, y: 0.0942564}
+  m_Offset: {x: 0.51067984, y: -0.27597523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.25, y: 0.31}
@@ -130,9 +130,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.697928, y: 1.1941738}
+  m_Size: {x: 1.7620065, y: 0.6245861}
   m_EdgeRadius: 0
---- !u!114 &1278692664719202881
+--- !u!114 &435127150654714034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7649119356657556437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6987b7da8964df34e89aee1b1309fdd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a1abe8afa4cb234abc46edaf596256b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Doordirection: 1
+  Zone: {fileID: 0}
