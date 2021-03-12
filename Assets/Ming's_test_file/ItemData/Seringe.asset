@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Seringe
   m_EditorClassIdentifier: 
   itemName: Seringe
-  itemDes: a Seringe
+  itemDes: Wait... Is it used? You gonna stab it anyway.
+  Dmg: 0
+  price: 1000
+  effect_value: 0.1
   itemSprite: {fileID: 21300000, guid: 0add801ce054bbe4b814fabe0439d24f, type: 3}
-  itemType: 0
+  itemType: 7
+  Code: Item_C1_Seringe

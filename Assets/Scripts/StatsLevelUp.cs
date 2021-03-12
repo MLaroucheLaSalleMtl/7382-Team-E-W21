@@ -21,7 +21,8 @@ public class StatsLevelUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        manager = FindObjectOfType<GameManager>();           
+        manager = FindObjectOfType<GameManager>();       
+        ShowStats();    
     }
 
     public void IncreaseStat(string name)

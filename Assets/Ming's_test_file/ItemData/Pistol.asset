@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   itemName: Pistol
-  itemDes: a pistol
+  itemDes: Nothing more, nothing less.
+  Dmg: 5
+  price: 100
+  effect_value: 0
   itemSprite: {fileID: 21300000, guid: 2cce30525c623ce428ce67afbf99b76a, type: 3}
-  itemType: 0
+  itemType: 1
+  Code: Item_WP0_Pistol

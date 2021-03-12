@@ -6,6 +6,10 @@ TagManager:
   tags:
   - StatBtn
   - RoomSpawnPoint
+  - Bullet
+  - Monster
+  - Weapon
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -45,4 +49,7 @@ TagManager:
     locked: 0
   - name: Projectile
     uniqueID: 1541493091
+    locked: 0
+  - name: Player Gun
+    uniqueID: 2892519291
     locked: 0

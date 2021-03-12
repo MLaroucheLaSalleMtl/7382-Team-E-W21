@@ -23,24 +23,29 @@ public class Fireworm_Attack : MonoBehaviour
 
     public void Shoot()
     {
-        //GameObject player = GameObject.FindGameObjectWithTag("Player");        
-        Vector2 spawn = head.transform.position;        
-        //Vector3 toDirection = new Vector3(0f,0f,0f);
-
-        for(int i = 0; i<maxProj; i++)
+        if(this.gameObject.GetComponent<Animator>().GetBool("Dead")!=true)//modified
         {
-            GameObject temp =
-            Instantiate(projectile, spawn, Quaternion.FromToRotation(transform.position, new Vector3(0f,0f,0f)));
-            if(i > 0) //For every projectile that is instantiated and that is not the first
+            //GameObject player = GameObject.FindGameObjectWithTag("Player");        
+            Vector2 spawn = head.transform.position;
+            bool flip = gameObject.GetComponent<SpriteRenderer>().flipX;
+            //Vector3 toDirection = new Vector3(0f,0f,0f);
+
+            for (int i = 0; i < maxProj; i++)
             {
-                float inc = (i < 3)?1:2;
-                //Spread the projectiles             If {i} is even or odd shoot upwards or downwards
-                temp.GetComponent<Rigidbody2D>().AddForce(((i%2 == 0)?Vector2.up:Vector2.down)*inc, ForceMode2D.Impulse);
-                //Rotate the projectiles depending if they are going up or down
-                //                    offset inc value to make it reusable
-                temp.transform.Rotate(0f,0f,angle*(inc-0.5f)*((i%2 == 0)?1f:-1f));
-            }      
+                GameObject temp =
+                Instantiate(projectile, spawn, Quaternion.FromToRotation(transform.position, new Vector3(0f, 0f, 0f)));
+                if (i > 0) //For every projectile that is instantiated and that is not the first
+                {
+                    float inc = (i < 3) ? 1 : 2;
+                    //Spread the projectiles             If {i} is even or odd shoot upwards or downwards
+                    temp.GetComponent<Rigidbody2D>().AddForce(((i % 2 == 0) ? Vector2.up : Vector2.down) * inc, ForceMode2D.Impulse);
+                    //Rotate the projectiles depending if they are going up or down
+                    //                    offset inc value to make it reusable
+                    temp.transform.Rotate(0f, 0f, (flip) ? -angle : angle * (inc - 0.5f) * ((i % 2 == 0) ? 1f : -1f));
+                }
+            }
         }
+        
     }
 
     

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   itemName: Shotgun
-  itemDes: a shotgun
+  itemDes: spread your anger
+  Dmg: 7
+  price: 500
+  effect_value: 25
   itemSprite: {fileID: 21300000, guid: 2b90a9f1b66c1a14798ccae3bbc9126a, type: 3}
-  itemType: 2
+  itemType: 3
+  Code: Item_WS0_Shotgun

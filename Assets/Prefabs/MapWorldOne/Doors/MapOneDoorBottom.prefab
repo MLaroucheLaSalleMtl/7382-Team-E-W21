@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5647666941031549570}
   - component: {fileID: 5170977905599058513}
   - component: {fileID: 6989467113299074654}
-  - component: {fileID: 9009447796370884717}
+  - component: {fileID: 6801622273277104519}
   m_Layer: 0
   m_Name: MapOneDoorBottom
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.46827942, y: 0.31657648}
+  m_Offset: {x: 0.49215734, y: 0.32453585}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.25, y: 0.43}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0574461, y: 0.45839787}
+  m_Size: {x: 1.7207234, y: 0.4743166}
   m_EdgeRadius: 0
 --- !u!50 &6989467113299074654
 Rigidbody2D:
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9009447796370884717
+--- !u!114 &6801622273277104519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8294745984195019324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6987b7da8964df34e89aee1b1309fdd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a1abe8afa4cb234abc46edaf596256b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Doordirection: 3
+  Zone: {fileID: 0}

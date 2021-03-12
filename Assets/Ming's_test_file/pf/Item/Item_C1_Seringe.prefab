@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6731715619372999953}
   m_Layer: 0
   m_Name: Item_C1_Seringe
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6731715619372999964}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
   m_LocalPosition: {x: -4.5, y: -4.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.3, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6731715619372999964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d0b2778604701488a2fb754d692476, type: 3}
+  m_Script: {fileID: 11500000, guid: fc41323d5cadeb64ebece94a0ddf3c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 540f3ec9171ce92448fdb8e2e12c330e, type: 2}
