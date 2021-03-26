@@ -1,5 +1,159 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2549334784641556581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7076950455754077809}
+  - component: {fileID: 8947614579054153455}
+  m_Layer: 0
+  m_Name: LightningR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7076950455754077809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549334784641556581}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6910101325548215606}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &8947614579054153455
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549334784641556581}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.51301634, y: 0.054673553}
+      - {x: 0.38135317, y: 0.4276329}
+      - {x: 0.30123463, y: 0.29556075}
+      - {x: 0.30558228, y: 0.46384674}
+      - {x: 0.24210063, y: 0.6486715}
+      - {x: 0.19828881, y: 0.6507085}
+      - {x: 0.13777524, y: 0.5526539}
+      - {x: 0.03062984, y: 0.7258262}
+      - {x: -0.035651445, y: 0.728605}
+      - {x: 0.13149346, y: 0.42163193}
+      - {x: 0.20877565, y: 0.51503813}
+      - {x: 0.2388042, y: 0.21985112}
+      - {x: 0.31235167, y: 0.20250505}
+      - {x: 0.3683366, y: 0.26833844}
+      - {x: 0.44803768, y: 0.056267332}
+      - {x: 0.42536485, y: 0.04623267}
+      - {x: 0.4262237, y: -0.0036085094}
+      - {x: 0.549333, y: -0.0024689347}
+      - {x: 0.547145, y: 0.045915455}
+--- !u!1 &4262891214791856160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7661990324147895238}
+  - component: {fileID: 3795749019300999792}
+  m_Layer: 0
+  m_Name: LightningL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7661990324147895238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4262891214791856160}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6910101325548215606}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &3795749019300999792
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4262891214791856160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.27562875, y: 0.427234}
+      - {x: -0.18312849, y: 0.38184142}
+      - {x: -0.15533872, y: 0.4284677}
+      - {x: -0.15638855, y: 0.5303054}
+      - {x: -0.08880751, y: 0.56321836}
+      - {x: -0.16608505, y: 0.5923204}
+      - {x: -0.22783339, y: 0.626309}
+      - {x: -0.2340105, y: 0.47923493}
+      - {x: -0.29441974, y: 0.51356626}
+      - {x: -0.34509403, y: 0.5072991}
+      - {x: -0.36854166, y: 0.4604873}
+      - {x: -0.49465927, y: 0.48392135}
+      - {x: -0.4143988, y: 0.18508643}
+      - {x: -0.5403196, y: 0.21246307}
+      - {x: -0.4858721, y: 0.051367566}
+      - {x: -0.52191234, y: 0.03760116}
+      - {x: -0.52158666, y: -0.0077905264}
+      - {x: -0.3948842, y: -0.0073352554}
+      - {x: -0.39310563, y: 0.041634656}
+      - {x: -0.4450728, y: 0.05497244}
+      - {x: -0.34036183, y: 0.16220412}
+      - {x: -0.4151805, y: 0.41958117}
+      - {x: -0.27521458, y: 0.36136577}
 --- !u!1 &6910101325548215605
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,8 +163,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6910101325548215606}
-  - component: {fileID: 6910101325548215600}
-  - component: {fileID: 6910101325548215607}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Untagged
@@ -28,62 +180,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7076950455754077809}
+  - {fileID: 7661990324147895238}
   m_Father: {fileID: 6910101325616978812}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &6910101325548215600
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6910101325548215605}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.29234266, y: -0.4731392}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.50925684, y: 0.2661113}
-  m_EdgeRadius: 0
---- !u!61 &6910101325548215607
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6910101325548215605}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3606644, y: -0.46950442}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.37683982, y: 0.270134}
-  m_EdgeRadius: 0
 --- !u!1 &6910101325616978785
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6910101325616978812}
+  - component: {fileID: 4523697914976158133}
   - component: {fileID: 6910101325616978813}
   - component: {fileID: 6910101325616978808}
   - component: {fileID: 6910101325616978787}
@@ -121,7 +224,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6910101325616978813
+--- !u!114 &4523697914976158133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +232,25 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6910101325616978785}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b78a5f6e6374b42bbf0871adf90b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health_Points: 100
+  speed: 2
+  experience: 10
+  detectionRange: 10
+  attackRange: 2
+  parentRoom: {fileID: 0}
+  cooldown: 1
+--- !u!114 &6910101325616978813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910101325616978785}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d05758c702a9783469c7499088990c8f, type: 3}
   m_Name: 
@@ -140,16 +262,16 @@ MonoBehaviour:
   detectRange: 6
   attackRange: 2
   retreatRange: 0
-  retreatReset: 0.3
-  retreatCooldown: 0.3
-  attackReset: 0.78
+  retreatReset: 0
+  retreatCooldown: 0
+  attackReset: 0.68
   attackCooldown: 3
   attackStart: {fileID: 6910101325548215605}
-  attackFrame: 0
+  attackFrame: 0.5
   parentRoom: {fileID: 0}
-  colA: {fileID: 0}
-  colB: {fileID: 0}
   newCenter: {x: 0, y: 0, z: 0}
+  walkaudio: {fileID: 0}
+  deathaudio: {fileID: 0}
 --- !u!114 &6910101325616978808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,8 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b4121f23db2414faa3f18f56e0dc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  right: {fileID: 6910101325548215600}
-  left: {fileID: 6910101325548215607}
+  right: {fileID: 8947614579054153455}
+  left: {fileID: 3795749019300999792}
   damage: 10
 --- !u!212 &6910101325616978787
 SpriteRenderer:
@@ -269,6 +391,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062772915, y: 0.18365201}
-  m_Size: {x: 0.2312344, y: 0.3826979}
+  m_Offset: {x: -0.057842694, y: 0.1861171}
+  m_Size: {x: 0.18521938, y: 0.37776774}
   m_Direction: 0

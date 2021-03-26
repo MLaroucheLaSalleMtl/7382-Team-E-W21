@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d13b04694d23054a8d77a5ca927d912, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  itemName: Pistol
+  itemDes: Nothing more, nothing less.
+  Dmg: 10
+  Price: 0
+  effect_value: 0
+  itemSprite: {fileID: 21300000, guid: 2cce30525c623ce428ce67afbf99b76a, type: 3}
+  itemType: 0
+  _Pref: {fileID: 8618346808798325030, guid: 138cd820ea5fa4d4dbf7a7c1881fde56, type: 3}
+  _bulletPpref: {fileID: 7228842895284390296, guid: 20996faf038e9fb49a708f15b8901f59, type: 3}
+  Code: Item_WP0_Pistol

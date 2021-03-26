@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1531601521311233439}
   - component: {fileID: 1784604359603547761}
   - component: {fileID: 4333937825709966922}
+  - component: {fileID: 1091465542743037431}
   m_Layer: 0
   m_Name: WorldOneDoorLeft
   m_TagString: Untagged
@@ -146,3 +147,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Doordirection: 4
   Zone: {fileID: 0}
+--- !u!95 &1091465542743037431
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483905179807622185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fba4838021a500641aabf6384c578af5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

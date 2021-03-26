@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6699777131084843420}
   - component: {fileID: 6699777131084843423}
-  - component: {fileID: 7134386608197874763}
   - component: {fileID: 2197601484280640338}
   m_Layer: 0
   m_Name: WorldOneNS
@@ -70,18 +69,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &7134386608197874763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6699777131084843422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a955db66307e6c84cbe08c35b6ad5fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2197601484280640338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +85,7 @@ MonoBehaviour:
   Doors:
   - {fileID: 1595409261590016670}
   - {fileID: 2166553158848797502}
+  ItemSpawnPoint: {fileID: 0}
 --- !u!1 &6699777131257735321
 GameObject:
   m_ObjectHideFlags: 0
@@ -14844,14 +14832,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9009447796370884717, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
---- !u!1 &2166553158848797502 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8294745984195019324, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
-  m_PrefabInstance: {fileID: 7858217403612928258}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5062335035711765744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3120143506073003506, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
+  m_PrefabInstance: {fileID: 7858217403612928258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2166553158848797502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8294745984195019324, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
   m_PrefabInstance: {fileID: 7858217403612928258}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8129984224653112987
@@ -15037,16 +15025,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapOneDoorTop
       objectReference: {fileID: 0}
+    - target: {fileID: 8806253049444886436, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1278692664719202881, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
---- !u!1 &1595409261590016670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7649119356657556437, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
-  m_PrefabInstance: {fileID: 8936032000818784587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2364020111567831938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6687148383547878089, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
+  m_PrefabInstance: {fileID: 8936032000818784587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1595409261590016670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7649119356657556437, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
   m_PrefabInstance: {fileID: 8936032000818784587}
   m_PrefabAsset: {fileID: 0}

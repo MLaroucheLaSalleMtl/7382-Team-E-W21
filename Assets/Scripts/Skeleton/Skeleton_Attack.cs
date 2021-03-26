@@ -12,6 +12,7 @@ public class Skeleton_Attack : MonoBehaviour
     private Animator parent;
     
     [SerializeField] private Collider2D inZone;
+    [SerializeField]AudioSource attackaudio;
 
     private void Start() 
     {
@@ -45,6 +46,7 @@ public class Skeleton_Attack : MonoBehaviour
     public void _MeleeHit()
     {
         inZone.gameObject.BroadcastMessage("PlayerHit", damage);    
+        attackaudio.Play();
     }
 
 

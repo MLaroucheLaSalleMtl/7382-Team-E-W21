@@ -13,17 +13,6 @@ public class EnteringDoor : MonoBehaviour
     [SerializeField] private int Doordirection;
     [SerializeField] private GameObject Zone;
 
-    void OpenDoors(int MonsterAlive)
-    {
-        if (MonsterAlive > 0)
-        {
-            this.gameObject.SetActive(false);
-        }
-        else
-        {
-            this.gameObject.SetActive(true);
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -55,11 +44,11 @@ public class EnteringDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private void Update()
     {
-      //  OpenDoors();
+      
     }
 }

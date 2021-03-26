@@ -64,14 +64,12 @@ public class Enemy : MonoBehaviour
     [Header ("Other Properties")]
      // -------ZoneController--------
     [SerializeField] private GameObject parentRoom;
-    // ----- Collider Ignore ------
-    // [Tooltip ("Provide both a kinematic and a dynamic RigidBody2D to prevent player from pushing this object")]
-    // [SerializeField] private Collider2D colA;
-    // [Tooltip ("Provide both a kinematic and a dynamic RigidBody2D to prevent player from pushing this object")]
-    // [SerializeField] private Collider2D colB;
-
     [Tooltip ("Offset center if pivot is somewhere else (caused by sprite cutting and to maintain consistency of animation")]
     [SerializeField] private Vector3 newCenter;
+    [Tooltip ("Walking sound audio source")]
+    [SerializeField] private AudioSource walkaudio;
+    [Tooltip ("Audiosource played when this unit dies")]
+    [SerializeField] private AudioSource deathaudio;
 
 
     //Ming
@@ -85,8 +83,7 @@ public class Enemy : MonoBehaviour
         retreatReset = 0f;
         distance = 0f;
         headpos = attackStart.transform.localPosition.x;
-        parentRoom.GetComponent<Map>().AddMonster();
-        //Physics2D.IgnoreCollision(colA,colB);
+        parentRoom.GetComponent<Map>().AddMonster();        
     }	
 	
 
@@ -96,34 +93,41 @@ public class Enemy : MonoBehaviour
         //if this unit's HP is 0 or below, it is considered dead and triggers the death animation
         if(this.HP <= 0)
         {
-            animator.SetBool("Dead", true);
+            animator.SetBool("Dead", true); //Play Death Animation
         }
         Debug.Log($"{gameObject.name} took + {pdmg} dmg");
     }
 
     
+    public void DeathAudio()
+    {
+        deathaudio.Play();
+    }
 
     public void Dead()  //Destroy this object when HP is 0 and increase player EXP; Called at end of Death Animation
     {
         parentRoom.GetComponent<Map>().ReduceMonster();
         GameManager.instance.AddExp(this.EXP);
         animator.SetBool("Walk", false);
-        animator.SetBool("Dead", false);
-        Destroy(this.gameObject);
+        //animator.SetBool("Dead", false);        
         //Ming
         //int randowm = RandomNumGenerator(0, 5);
         Debug.Log("it is dead");
-        ItemDrop();
-        
+        ItemDrop();        
     }
 
+    public void RemoveThis()        //Actual method to destroy object -- Put it separate method because doesnt work when inside Dead()
+    {
+        Destroy(gameObject);
+    }
+    
     //Ming
     int RandomNumGenerator(int from, int to)
 	{
         int random = Random.Range(from, to);
         return random;
     }
-    void ItemDrop()
+    public void ItemDrop()
 	{
         Debug.Log("drop method runs");
         if(RandomNumGenerator(0,101)<90)
@@ -162,7 +166,6 @@ public class Enemy : MonoBehaviour
             
         
     }
-
     private void _AttackTimer()
     {
         if(animator.GetBool("Attack") && attackCDTimer == 0f)
@@ -188,9 +191,8 @@ public class Enemy : MonoBehaviour
             firing = false;
             //Reset all attack timers when we finish coolingdown      
         }
-    }
+    }        
 
-    
     private void Walk() //Change enemy position in scene in accordance to player position
     {        
         if (animator.GetBool("Detected")&&animator.GetBool("Dead")!=true)//modified
@@ -267,6 +269,7 @@ public class Enemy : MonoBehaviour
         FlipSprite();
         //Attack();
         animator.SetBool("Dead", (this.HP <= 0)? true:false);
+        if(animator.GetBool("Walk") && !walkaudio.isPlaying){walkaudio.Play();}else if(!animator.GetBool("Walk")){walkaudio.Pause();}
         //---------- Reset Timers -------------
         //Reset retreat (to prevent infinite retreating)
         _RetreatTimer();

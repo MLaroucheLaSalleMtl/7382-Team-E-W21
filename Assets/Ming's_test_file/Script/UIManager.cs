@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
-            Debug.Log("I pressed");
+            //Debug.Log("I pressed");
             if(GameManager.instance.isPaused==true)
             {
                 Resume();

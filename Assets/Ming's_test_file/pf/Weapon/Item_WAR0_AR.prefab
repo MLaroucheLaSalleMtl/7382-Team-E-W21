@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3029079433892822225}
   - component: {fileID: 3029079433892822226}
   - component: {fileID: 3029079433892822227}
-  - component: {fileID: -4869692875835989543}
   m_Layer: 0
   m_Name: Item_WAR0_AR
   m_TagString: Weapon
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3029079433892822238}
   m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
   m_LocalPosition: {x: -3.79, y: 6.44, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.17, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d91f4e3d452031440912042c9804a8f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8eb9cbffb479d594995435e1116194af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,25 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc41323d5cadeb64ebece94a0ddf3c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 8b8dbfb4a87de1b488b2ba8283ab2925, type: 2}
---- !u!50 &-4869692875835989543
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029079433892822238}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  itemData: {fileID: 11400000, guid: a8871d9b2f7ae18428aec83d4dee6ec8, type: 2}
