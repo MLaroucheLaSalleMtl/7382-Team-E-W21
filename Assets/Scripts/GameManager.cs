@@ -7,12 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     [Header("Character Stats")] //Used to retrieve player's stat values
-    [Range(0f,5f)] [SerializeField] private int playerSpeed; //The movement speed of the player.
 
     public float playerHP;
     [SerializeField] private float playerMAXHP; //Highest HP the player can have at any one time.
     [SerializeField] private float playerShield; //Player Armor/tempHP at start of game.
     [SerializeField] private float expToLevel; //Amount of exp needed to level up
+    [Range(0f,10f)] [SerializeField] private float playerSpeed; //The movement speed of the player.
     [Range (0f,50f)] [SerializeField] private float playerMAXShield;
     [Range(0f, 0.5f)] [SerializeField] private float playerCDReduc; //Cooldown Reduction on Dash/Items ---- Range is for testing purposes
     [Range(0f, 0.5f)] [SerializeField] private float playerRSpeed; //Reload Speed of player ---- Range is for testing purposes
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     public float PlayerMAXHP { get => playerMAXHP; set => playerMAXHP = value; }
     public float PlayerArmor { get => playerShield; set => playerShield = value; }
     public float PlayerMAXArmor { get => playerMAXShield; set => playerMAXShield = value; }
-    public int PlayerSpeed { get => playerSpeed; set => playerSpeed = value; }
+    public float PlayerSpeed { get => playerSpeed; set => playerSpeed = value; }
     public float PlayerCDReduc { get => playerCDReduc; set => playerCDReduc = value; }
     public float PlayerRSpeed { get => playerRSpeed; set => playerRSpeed = value; }
     public int PlayerSP { get => playerSP; set => playerSP = value; }
@@ -78,8 +78,19 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
         DisplayItem();
-
-	}
+        //
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].itemType==Item.ItemType.Gaget)
+            {
+                Gadget = items[i];
+            }
+            else if (items[i].itemType == Item.ItemType.Activatable)
+            {
+                Activatables = items[i];
+            }
+        }
+    }
 
 	public void SetWeapon(){}
 
@@ -134,6 +145,7 @@ public class GameManager : MonoBehaviour
     }
     public void AddItem(Item item)
     {
+        //Debug.Log("Add item(" + item.itemName + ")");
         if (!items.Contains(item))
         {
             items.Add(item);
@@ -163,6 +175,10 @@ public class GameManager : MonoBehaviour
                     itemNumbers[i]--;
                     if(itemNumbers[i]==0)
 					{
+                        if(Activatables ==item)
+						{
+                            Activatables = null;
+						}
                         items.Remove(item);
                         itemNumbers.Remove(itemNumbers[i]);
 					}
@@ -176,19 +192,43 @@ public class GameManager : MonoBehaviour
         //refresh inventory
         DisplayItem();
 	}
-    public void useItem(Item item)
+    public void useItem(Item _item)
     {
-        if(item.itemType==Item.ItemType.Pill)
-		{
-            playerHP += item.effect_value;
-            Debug.Log( "Player hp: " + playerHP+"---" +item.itemName + " is used.");
-            //Debug.Log("Player hp: " + playerHP);
+        int num;
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (_item == items[i])
+            {
+                num = i;
+                if (_item.Code.Contains("C1") && itemNumbers[num] > 0)//status boost
+                {
+                    Debug.Log(_item.itemName + " is used.");
+                    playerMAXHP += _item.effect_value;
+                    RemoveItem(_item);
+                }
+                else if(_item.Code.Contains("C2") && itemNumbers[num] > 0)
+				{
+                    Debug.Log(_item.itemName + " is used.");
+                    playerSpeed += _item.effect_value*playerSpeed;
+                    RemoveItem(_item);
+                }
+                else if (_item.Code.Contains("C3") && itemNumbers[num] > 0)
+                {
+                    Debug.Log(_item.itemName + " is used.");
+                    playerShield += _item.effect_value;
+                    RemoveItem(_item);
+                }
+            }
+			else if (_item.itemType == Item.ItemType.Pill)
+            {
+                playerHP += _item.effect_value;
+                Debug.Log("Player hp: " + playerHP + "---" + _item.itemName + " is used.");
+                //Debug.Log("Player hp: " + playerHP);
+
+            }
         }
-        else if(item.itemType==Item.ItemType.Syringe)//status boost
-		{
-            Debug.Log(item.itemName+" is used.");
-            playerMAXHP += 10;
-		}
+        
+
     }
     
     /// </summary>
@@ -212,6 +252,10 @@ public class GameManager : MonoBehaviour
     private void Update() 
     {
         UpdateBars();
+        if(Input.GetKeyDown(KeyCode.E)&&Activatables!=null)
+		{
+            useItem(Activatables);
+		}
     }
 
 }

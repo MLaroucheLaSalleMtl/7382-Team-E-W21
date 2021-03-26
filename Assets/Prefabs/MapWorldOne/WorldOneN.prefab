@@ -3127,7 +3127,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7877802610898515216}
   - component: {fileID: 7206196309875197501}
-  - component: {fileID: -6278932436760915838}
   - component: {fileID: 6025420686711915368}
   m_Layer: 0
   m_Name: WorldOneN
@@ -3174,18 +3173,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &-6278932436760915838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837639684377803338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a955db66307e6c84cbe08c35b6ad5fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6025420686711915368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3201,6 +3188,7 @@ MonoBehaviour:
   NbOfMonster: 0
   Doors:
   - {fileID: 2326850083101590679}
+  ItemSpawnPoint: {fileID: 0}
 --- !u!1 &4060580464656132965
 GameObject:
   m_ObjectHideFlags: 0
@@ -13470,6 +13458,10 @@ PrefabInstance:
     - target: {fileID: 7649119356657556437, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
       propertyPath: m_Name
       value: MapOneDoorTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806253049444886436, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1278692664719202881, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}

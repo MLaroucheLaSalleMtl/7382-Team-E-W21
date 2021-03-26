@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stormhead_Attack : MonoBehaviour
 {
-    [SerializeField] private BoxCollider2D right,left;
+    [SerializeField] private PolygonCollider2D right,left;
     [SerializeField] private int damage;
     private Collider2D inZone;
 
@@ -34,5 +34,10 @@ public class Stormhead_Attack : MonoBehaviour
         if(inZone.gameObject.transform.position.x < transform.position.x)
         inZone.gameObject.BroadcastMessage("PlayerHit", damage);
     }        
+
+    // public void ToggleAttack()
+    // {
+    //     gameObject.GetComponent<Animator>().SetBool("Attack", false);
+    // }
     
 }

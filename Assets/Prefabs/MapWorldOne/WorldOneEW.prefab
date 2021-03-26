@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3378137605315450901}
   - component: {fileID: 6349826809695924936}
   - component: {fileID: 8130601522104223871}
-  - component: {fileID: 3484117734918979208}
   - component: {fileID: 8796510093335292038}
   m_Layer: 0
   m_Name: WorldOneEW
@@ -80,18 +79,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3484117734918979208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136477369759578035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a955db66307e6c84cbe08c35b6ad5fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8796510093335292038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +95,7 @@ MonoBehaviour:
   Doors:
   - {fileID: 1476076604469327911}
   - {fileID: 6347640811297192642}
+  ItemSpawnPoint: {fileID: 0}
 --- !u!1 &1413119983578148021
 GameObject:
   m_ObjectHideFlags: 0

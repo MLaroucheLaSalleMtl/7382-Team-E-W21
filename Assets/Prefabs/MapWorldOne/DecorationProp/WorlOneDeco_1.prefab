@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3372369178935359842}
   - component: {fileID: 2125238386431383889}
   - component: {fileID: 4121993201622954148}
+  - component: {fileID: 5332278632679357180}
   m_Layer: 0
   m_Name: WorlOneDeco_1
   m_TagString: Untagged
@@ -109,3 +110,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6875, y: 0.68928385}
   m_EdgeRadius: 0
+--- !u!95 &5332278632679357180
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116060212270215255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc416b4ea12daac4b9059a8f1ecdce3a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

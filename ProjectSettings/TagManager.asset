@@ -10,6 +10,8 @@ TagManager:
   - Monster
   - Weapon
   - Item
+  - EnemyAttackBox
+  - Room
   layers:
   - Default
   - TransparentFX

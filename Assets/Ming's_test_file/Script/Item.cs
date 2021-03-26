@@ -28,13 +28,15 @@ public class Item:ScriptableObject
     }
     public string itemDes;
     public int Dmg;
-    public int price;
+    public int Price;
     public float effect_value;
 
     public Sprite itemSprite;
 
     //public int amount;
     public ItemType itemType;
+    public GameObject _Pref;
+    public GameObject _bulletPpref;
     public string Code;
 
     //public Item(string name, ItemType itemType)

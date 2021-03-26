@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d13b04694d23054a8d77a5ca927d912, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  itemName: Shotgun
+  itemDes: spread your anger
+  Dmg: 7
+  Price: 1000
+  effect_value: 25
+  itemSprite: {fileID: 21300000, guid: 2b90a9f1b66c1a14798ccae3bbc9126a, type: 3}
+  itemType: 0
+  _Pref: {fileID: 2311924778035139398, guid: 6cddbfc3d41b85a44897cfd778b89b64, type: 3}
+  _bulletPpref: {fileID: 7228842895284390296, guid: 20996faf038e9fb49a708f15b8901f59, type: 3}
+  Code: Item_WS0_Shotgun

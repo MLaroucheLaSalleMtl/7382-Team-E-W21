@@ -15,8 +15,10 @@ MonoBehaviour:
   itemName: Grenade
   itemDes: a dangerous explosive
   Dmg: 50
-  price: 300
+  Price: 0
   effect_value: 0
   itemSprite: {fileID: 21300000, guid: 159041c378cd43d41b97348d7326b01b, type: 3}
   itemType: 6
+  _Pref: {fileID: 624664584102713252, guid: c0eeef5119bc3fc46962ff6b1c0a33e0, type: 3}
+  _bulletPpref: {fileID: 2223594788042747029, guid: 61587e66687cb724490f9d61bffcce8c, type: 3}
   Code: Item_G0_Grenade

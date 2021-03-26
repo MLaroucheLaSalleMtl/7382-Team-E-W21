@@ -6,10 +6,11 @@ public class Map : MonoBehaviour
 {
     public int NbOfMonster;
     public GameObject[] Doors;
+    public GameObject ItemSpawnPoint;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DoorsController", 0.5f);
+        this.DoorsController();
     }
 
     // Update is called once per frame
@@ -33,17 +34,22 @@ public class Map : MonoBehaviour
     {
         if (NbOfMonster <= 0)
         {
+            
             for (int i = 0; i < Doors.Length; i++)
             {
-                Doors[i].GetComponent<BoxCollider2D>().enabled = true;
+                Doors[i].GetComponent<Animator>().SetBool("IsMonsterAlive", false);
+                Doors[i].GetComponent<BoxCollider2D>().isTrigger = true;
             }
+            ItemSpawnPoint.GetComponent<ItemSpawner>().SpawnItem();
         }
         else
         {
             for (int i = 0; i < Doors.Length; i++)
             {
-                Doors[i].GetComponent<BoxCollider2D>().enabled = false; 
+                Doors[i].GetComponent<Animator>().SetBool("IsMonsterAlive", true);
+                Doors[i].GetComponent<BoxCollider2D>().isTrigger = false; 
             }
         }
+
     }
 }
