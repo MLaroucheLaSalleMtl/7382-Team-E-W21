@@ -13426,11 +13426,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2686374989397446797}
   - component: {fileID: 2686374989397446798}
-  - component: {fileID: 8187771241422713240}
   - component: {fileID: 2244161297776244944}
+  - component: {fileID: 6288175090317568603}
   m_Layer: 0
   m_Name: WorldOneSW
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13480,6 +13480,7 @@ Transform:
   - {fileID: 4562856835370599664}
   - {fileID: 5766075256123890853}
   - {fileID: 6010619660090397389}
+  - {fileID: 3717296303970966633}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13495,18 +13496,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &8187771241422713240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686374989397446799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a955db66307e6c84cbe08c35b6ad5fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2244161297776244944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13523,6 +13512,80 @@ MonoBehaviour:
   Doors:
   - {fileID: 4212588827251460046}
   - {fileID: 1017726771717829053}
+  ItemSpawnPoint: {fileID: 3596844217546012109}
+  Decoration: []
+  ItemList:
+  - {fileID: 11400000, guid: 69de3682375797e4faa8146873b3e2d3, type: 2}
+  - {fileID: 11400000, guid: 40aa83eee17416c4f9a3dbaf3fd103ab, type: 2}
+  - {fileID: 11400000, guid: 44ed578264a1b1f4e93baff5c13d036b, type: 2}
+  - {fileID: 11400000, guid: 540f3ec9171ce92448fdb8e2e12c330e, type: 2}
+  - {fileID: 11400000, guid: a2df6e0c83ab9de49823ed2da5216cef, type: 2}
+  WeaponList:
+  - {fileID: 11400000, guid: a8871d9b2f7ae18428aec83d4dee6ec8, type: 2}
+  - {fileID: 11400000, guid: 8b8dbfb4a87de1b488b2ba8283ab2925, type: 2}
+  - {fileID: 11400000, guid: 9674e34145e16bb4b8758010ca0b856e, type: 2}
+  - {fileID: 11400000, guid: 447058099edbbe84da77c5b4cfb812d3, type: 2}
+  - {fileID: 11400000, guid: f997243e93da75940b5d126b7422ce9c, type: 2}
+  - {fileID: 11400000, guid: 316aa603d1d7ebe4fa78b5136739fe34, type: 2}
+  - {fileID: 11400000, guid: c0278adb3fc1d5f499e15d6f3c7cedbd, type: 2}
+  - {fileID: 11400000, guid: a380646444b95614f8f5a667d52c1772, type: 2}
+  offset: {x: 0, y: 0}
+--- !u!61 &6288175090317568603
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686374989397446799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &3596844217546012109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3717296303970966633}
+  m_Layer: 0
+  m_Name: ItemSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3717296303970966633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596844217546012109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2686374989397446797}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &220058876665471383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13530,6 +13593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2686374989397446797}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 2686374989397446799}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (3)
@@ -13720,6 +13787,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2686374989397446797}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 2686374989397446799}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (1)
@@ -13914,6 +13985,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2686374989397446797}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 2686374989397446799}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead
@@ -14031,14 +14106,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1012167403992828119, guid: 82495ba4784430d4f898904d5e19b190, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 82495ba4784430d4f898904d5e19b190, type: 3}
---- !u!1 &1017726771717829053 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1483905179807622185, guid: 82495ba4784430d4f898904d5e19b190, type: 3}
-  m_PrefabInstance: {fileID: 1911869290285290900}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1164171322303577491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 770015872570304519, guid: 82495ba4784430d4f898904d5e19b190, type: 3}
+  m_PrefabInstance: {fileID: 1911869290285290900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1017726771717829053 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1483905179807622185, guid: 82495ba4784430d4f898904d5e19b190, type: 3}
   m_PrefabInstance: {fileID: 1911869290285290900}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2097933147449364709
@@ -14296,6 +14371,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2686374989397446797}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 2686374989397446799}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (2)
@@ -14598,14 +14677,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
---- !u!1 &4212588827251460046 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8294745984195019324, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
-  m_PrefabInstance: {fileID: 5290257034419144178}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7072407621271658496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3120143506073003506, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
+  m_PrefabInstance: {fileID: 5290257034419144178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4212588827251460046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8294745984195019324, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
   m_PrefabInstance: {fileID: 5290257034419144178}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5310390773511272963

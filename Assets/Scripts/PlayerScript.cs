@@ -1,7 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -10,10 +10,15 @@ public class PlayerScript : MonoBehaviour
     private Animator animator;
     private Vector3 deadpos;
     private Vector3 _localPos;
+    [SerializeField] private GameObject DeadScreen;
+
+    //Ming
+    [SerializeField] AudioSource fire,flesh,eletric;
 
     private void Awake() 
     {
        _localPos = gameObject.transform.localPosition; 
+       if(DeadScreen.activeSelf){DeadScreen.SetActive(false);}
     }
     // Start is called before the first frame update
     void Start()
@@ -32,7 +37,7 @@ public class PlayerScript : MonoBehaviour
         {
             gameManager.PlayerArmor -= damage;
         }
-        else if (gameManager.PlayerArmor < damage)
+        else if (gameManager.PlayerArmor <= damage)
         {
             newDmg = damage - gameManager.PlayerArmor;
             gameManager.PlayerArmor = 0;
@@ -40,6 +45,24 @@ public class PlayerScript : MonoBehaviour
 
         gameManager.PlayerHP -= newDmg; //Take damage to HP
         StartCoroutine("toggleHit");
+        //Debug.Log($"Player was hit for {newDmg} damage");
+    }
+
+    void DmgSound(string DmgType)
+	{
+        if(DmgType=="flesh")
+        {
+            flesh.Play();
+        
+        }
+        else if(DmgType=="fire")
+		{
+            fire.Play();
+		}
+        else if (DmgType == "eletric")
+        {
+            eletric.Play();
+        }
     }
 
     IEnumerator toggleHit()
@@ -48,6 +71,7 @@ public class PlayerScript : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         animator.SetBool("Hit", false);
     }
+    
 
     private void checkDead()
     {
@@ -70,7 +94,13 @@ public class PlayerScript : MonoBehaviour
         gameObject.transform.localPosition = _localPos;
     }
 
-
+    public void ShowDeadScreen()
+    {
+        GameManager.instance.isPaused = true;
+        Time.timeScale = 0f;
+        DeadScreen.SetActive(true);
+        
+    }
 
     // Update is called once per frame
     void Update()

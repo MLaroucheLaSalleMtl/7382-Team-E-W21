@@ -7,11 +7,6 @@ public class PickupItem : MonoBehaviour
     //public GameObject pf_Itemspawn;
     //public GameObject pf_weaponSpwan;
     public Item itemData;
-    private void Start()
-    {
-
-        //print(gameObject.name);
-    }
     //public gameobject EffectwhenPickup;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,24 +22,11 @@ public class PickupItem : MonoBehaviour
             {
                 Debug.Log("activatable detected");
                 ActivatableExchange();
-                /*if (itemData.Code.Contains("Item_C"))
-                {
-                    Debug.Log("Item_C contains");
-                    
-                }
-                
-                else
-                {
-                    Destroy(gameObject);
-                    GameManager.instance.AddItem(itemData);
-                }*/
             }
             else if (itemData.itemType == Item.ItemType.Gaget)
             {
                 GadgetExchange();
             }
-
-
 
             //instantisate pick effect here
 
@@ -57,151 +39,86 @@ public class PickupItem : MonoBehaviour
         if (itemData.itemType == Item.ItemType.Weapon)//this.gameObject.tag=="Weapon"
         {
             //Debug.Log("Weapon pick up");
-            WeaponExchange(collision.gameObject);
-
-            Destroy(this.gameObject);
+            int goingDir;
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+                {
+                    goingDir = 4;
+                    WeaponExchange(collision.gameObject, goingDir);
+                    Destroy(this.gameObject);
+                }
+				else
+				{
+                    goingDir = 4;
+                    WeaponExchange(collision.gameObject, goingDir);
+                    Destroy(this.gameObject);
+                }
+            }
+            else if(Input.GetKey(KeyCode.D))
+			{
+                if(Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.S))
+				{
+                    goingDir = 6;
+                    WeaponExchange(collision.gameObject, goingDir);
+                    Destroy(this.gameObject);
+				}
+                else
+                {
+                    goingDir = 6;
+                    WeaponExchange(collision.gameObject, goingDir);
+                    Destroy(this.gameObject);
+                }
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                goingDir = 8;
+                WeaponExchange(collision.gameObject, goingDir);
+                Destroy(this.gameObject);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                goingDir = 2;
+                WeaponExchange(collision.gameObject, goingDir);
+                Destroy(this.gameObject);
+            }
         }
+        
     }
+
     //use Item.code to search for specific one, can be opt later.(dont need if condition)
-    void WeaponExchange(GameObject player)
+    void WeaponExchange(GameObject player,int goingDir)//4:left, 6:right, 8:up, 2:down
     {
-        if (itemData.Code == "Item_WAR0_AR")// == "Item_WAR0_AR")
+        
+        Debug.Log(itemData.Code+" detected");
+        Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
+
+        //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
+        player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
+        player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
+        player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.2f;
+        Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
+        //Destroy(this.gameObject);
+
+        if (goingDir == 6)//going right
         {
-            Debug.Log("Item_WAR0_AR detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-            //Destroy(this.gameObject);
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-
+            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(-0.5f, 0, 0), pre_gun._Pref.transform.rotation);
         }
-        else if (itemData.Code == "Item_WAR1_AR")// == "Item_WAR0_AR")
-        {
-            Debug.Log("Item_WAR1_AR detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-            //Destroy(this.gameObject);
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-
-        }
-        else if (itemData.Code == "Item_WP0_Pistol")// == "Item_WP0_Pistol")
-        {
-            Debug.Log("Item_WP0_Pistol detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-
-        }
-        else if (itemData.Code == "Item_WP1_Pistol")// == "Item_WP0_Pistol")
-        {
-            Debug.Log("Item_WP1_Pistol detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-
-        }
-        else if (itemData.Code == "Item_WS0_Shotgun") //== "Item_WS0_Shotgun")
-        {
-            Debug.Log("Item_WS0_Shotgun detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-            //Destroy(this.gameObject);
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-
-        }
-        else if (itemData.Code == "Item_WS1_Shotgun") //== "Item_WS0_Shotgun")
-        {
-            Debug.Log("Item_WS0_Shotgun detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-            //Destroy(this.gameObject);
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-
-        }
-        else if (itemData.Code == "Item_WSR0_SniperR") //== "Item_WSR0_SniperR") //need to flip the image
-        {
-            Debug.Log("Item_WSR0_SniperR detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            //player.transform.GetChild(0).transform.localScale.
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-            //Destroy(this.gameObject);
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-        }
-        else if (itemData.Code == "Item_WSR1_SniperR") //== "Item_WSR0_SniperR") //need to flip the image
-        {
-            Debug.Log("Item_WSR1_SniperR detected");
-            Item pre_gun = player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
-
-            //player.transform.GetComponent<Equipment>().CurrentWeaponData = itemData;
-            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemSprite;
-            player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data = itemData;
-            player.transform.GetChild(0).transform.localScale = itemData._Pref.transform.localScale * 0.1f;
-            //player.transform.GetChild(0).transform.localScale.
-            Debug.Log("current weapon data change to " + player.transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data);
-            //Destroy(this.gameObject);
-            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
-
-        }
-
-        ///this part is covered by additem(), no longer needed
-        /*if(this.gameObject.name.Contains("Item_C0_RedPill"))//== "Item_C0_RedPill")
+        else if(goingDir == 4)//going left
 		{
-            itemData = GameObject.Find("Item Asset").GetComponent<ItemAssets>().C0;
-            GameObject.Find("GameManager").GetComponent<GameManager>().AddItem(itemData);
-            Destroy(this.gameObject);
-            Debug.Log("found");
+            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0.5f, 0, 0), pre_gun._Pref.transform.rotation);
         }
-        else if (this.gameObject.name.Contains("Item_C1_Seringe"))// == "Item_C1_Seringe")
+        else if (goingDir == 8)//going up
         {
-            itemData = GameObject.Find("Item Asset").GetComponent<ItemAssets>().C1;
-            GameObject.Find("GameManager").GetComponent<GameManager>().AddItem(itemData);
-            Destroy(this.gameObject);
-            Debug.Log("found");
+            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0, -0.5f, 0), pre_gun._Pref.transform.rotation);
         }
-        else if (this.gameObject.name.Contains("Item_G0_Grenade"))// == "Item_G0_Grenade")
+        else if (goingDir == 2)//going down
         {
-            itemData = GameObject.Find("Item Asset").GetComponent<ItemAssets>().G0;
-            GameObject.Find("GameManager").GetComponent<GameManager>().AddItem(itemData);
-            Destroy(this.gameObject);
-            Debug.Log("found");
-        }*/
+            Instantiate(pre_gun._Pref, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), pre_gun._Pref.transform.rotation);
+        }
+
     }
+
     void ActivatableExchange()
     {
         if (GameManager.instance.Activatables == null)

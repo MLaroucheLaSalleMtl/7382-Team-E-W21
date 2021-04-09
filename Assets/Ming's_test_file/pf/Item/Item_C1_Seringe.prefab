@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6731715619372999955}
   - component: {fileID: 6731715619372999952}
   - component: {fileID: 6731715619372999953}
+  - component: {fileID: 358967670942630450}
   m_Layer: 0
   m_Name: Item_C1_Seringe
   m_TagString: Item
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6731715619372999964}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
   m_LocalPosition: {x: -4.5, y: -4.08, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.3, z: 0.2}
+  m_LocalScale: {x: 0.8, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,3 +114,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 540f3ec9171ce92448fdb8e2e12c330e, type: 2}
+--- !u!95 &358967670942630450
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731715619372999964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad656220051d4cd43af1723966cf79d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

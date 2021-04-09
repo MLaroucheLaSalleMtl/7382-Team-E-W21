@@ -39,7 +39,7 @@ public class GunScript : MonoBehaviour
     public Item CurrentWeapon_data;
     public Camera Cam;
     public Rigidbody2D Rb_player;
-    float scaling = 0;
+    //float scaling = 0; move to GM.cs
 
     //Chris
     private AudioSource gunaudio;
@@ -84,165 +84,206 @@ public class GunScript : MonoBehaviour
 
 	private void Pistol_shoot()
 	{
-        if (CurrentWeapon_data.Code == "Item_WP0_Pistol" && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.instance.isPaused == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && GameManager.instance.isPaused == false)
         {
-            GameObject bullet_pistol = Instantiate(CurrentWeapon_data._bulletPpref, guntip.transform.position, guntip.transform.rotation);
-            bullet_pistol.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
-            bullet_pistol.transform.eulerAngles = new Vector3(bullet_pistol.transform.eulerAngles.x, bullet_pistol.transform.eulerAngles.y, bullet_pistol.transform.eulerAngles.z - 90);
-            Rigidbody2D rb = bullet_pistol.GetComponent<Rigidbody2D>();
-            rb.AddForce(guntip.transform.up * 20f, ForceMode2D.Impulse);
-            //Debug.Log("pistol shoot");
-            //flip the image
-            GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
-            fire = true;
-            recoil();
-            gunaudio.Play(); //Chris play audio clip
-        }
-        else if (CurrentWeapon_data.Code == "Item_WP1_Pistol" && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.instance.isPaused == false)
-        {
-            GameObject bullet_pistol1 = Instantiate(CurrentWeapon_data._bulletPpref, guntip.transform.position+new Vector3(0.1f,0.1f,0), guntip.transform.rotation);
-            bullet_pistol1.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
-            bullet_pistol1.transform.eulerAngles = new Vector3(bullet_pistol1.transform.eulerAngles.x, bullet_pistol1.transform.eulerAngles.y, bullet_pistol1.transform.eulerAngles.z - 90);
-            Rigidbody2D rb1 = bullet_pistol1.GetComponent<Rigidbody2D>();
-            rb1.AddForce(guntip.transform.up * 20f, ForceMode2D.Impulse);
+            //default pistol
+            if (CurrentWeapon_data.Code == "Item_WP0_Pistol")
+            {
+                GameObject bullet_pistol = Instantiate(CurrentWeapon_data._bulletPpref,
+                    guntip.transform.position,
+                    guntip.transform.rotation);
 
-            
+                bullet_pistol.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
 
-            GameObject bullet_pistol2 = Instantiate(CurrentWeapon_data._bulletPpref, guntip.transform.position, guntip.transform.rotation);
-            bullet_pistol2.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
-            bullet_pistol2.transform.eulerAngles = new Vector3(bullet_pistol2.transform.eulerAngles.x, bullet_pistol2.transform.eulerAngles.y, bullet_pistol2.transform.eulerAngles.z - 90);
-            Rigidbody2D rb2 = bullet_pistol2.GetComponent<Rigidbody2D>();
-            rb2.AddForce(guntip.transform.up * 20f, ForceMode2D.Impulse);
+                bullet_pistol.transform.eulerAngles = new Vector3(bullet_pistol.transform.eulerAngles.x,
+                    bullet_pistol.transform.eulerAngles.y,
+                    bullet_pistol.transform.eulerAngles.z - 90);
 
+                Rigidbody2D rb = bullet_pistol.GetComponent<Rigidbody2D>();
+                rb.AddForce(guntip.transform.up * 20f, ForceMode2D.Impulse);
+                //Debug.Log("pistol shoot");
+                //flip the image
+                GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+                fire = true;
+                recoil(0.2f);
+                gunaudio.Play(); //Chris play audio clip
+            }
+            //BlueRose
+            else if (CurrentWeapon_data.Code == "Item_WP1_Pistol")
+            {
+                //First bullet
+                GameObject bullet_pistol1 = Instantiate(CurrentWeapon_data._bulletPpref,
+                    guntip.transform.position + new Vector3(0.1f, 0.1f, 0),
+                    guntip.transform.rotation);
+                bullet_pistol1.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
+                bullet_pistol1.transform.eulerAngles = new Vector3(bullet_pistol1.transform.eulerAngles.x,
+                    bullet_pistol1.transform.eulerAngles.y,
+                    bullet_pistol1.transform.eulerAngles.z - 90);
 
-            //Debug.Log("pistol shoot");
-            //flip the image
-            GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
-            fire = true;
-            recoil();
-            gunaudio.Play(); //Chris play audio clip
+                Rigidbody2D rb1 = bullet_pistol1.GetComponent<Rigidbody2D>();
+                rb1.AddForce(guntip.transform.up * 20f, ForceMode2D.Impulse);
+
+                //Second bullet
+                GameObject bullet_pistol2 = Instantiate(CurrentWeapon_data._bulletPpref,
+                    guntip.transform.position,
+                    guntip.transform.rotation);
+
+                bullet_pistol2.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
+
+                bullet_pistol2.transform.eulerAngles = new Vector3(bullet_pistol2.transform.eulerAngles.x,
+                    bullet_pistol2.transform.eulerAngles.y,
+                    bullet_pistol2.transform.eulerAngles.z - 90);
+
+                Rigidbody2D rb2 = bullet_pistol2.GetComponent<Rigidbody2D>();
+                rb2.AddForce(guntip.transform.up * 20f, ForceMode2D.Impulse);
+                //Debug.Log("pistol shoot");
+                //flip the image
+                GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+                fire = true;
+                recoil(0.5f);
+                gunaudio.Play(); //Chris play audio clip
+            }
         }
     }
     private void AR_shoot()
     {
         
-        if (CurrentWeapon_data.Code == "Item_WAR0_AR" && Input.GetKey(KeyCode.Mouse0) && GameManager.instance.isPaused == false)
+        if (GameManager.instance.isPaused == false)
         {
-            //bullet.transform.localScale = new Vector3(0.556f, 0.556f, 0.556f);
-            GameObject bullet_AR = Instantiate(CurrentWeapon_data._bulletPpref, guntip.transform.position, guntip.transform.rotation);
-            bullet_AR.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
-            bullet_AR.transform.eulerAngles = new Vector3(bullet_AR.transform.eulerAngles.x, bullet_AR.transform.eulerAngles.y, bullet_AR.transform.eulerAngles.z - 90);
-            Rigidbody2D rb = bullet_AR.GetComponent<Rigidbody2D>();
-            rb.AddForce(guntip.transform.up * 25f, ForceMode2D.Impulse);
-            //Debug.Log("AR shoot");
-            //flip the image
-            GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
-            fire = true;
-            recoil();
+            if (CurrentWeapon_data.Code == "Item_WAR0_AR" && Input.GetKey(KeyCode.Mouse0))
+            {
+                //bullet.transform.localScale = new Vector3(0.556f, 0.556f, 0.556f);
+                GameObject bullet_AR = Instantiate(CurrentWeapon_data._bulletPpref, guntip.transform.position, guntip.transform.rotation);
+                bullet_AR.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
+                bullet_AR.transform.eulerAngles = new Vector3(bullet_AR.transform.eulerAngles.x, bullet_AR.transform.eulerAngles.y, bullet_AR.transform.eulerAngles.z - 90);
+                Rigidbody2D rb = bullet_AR.GetComponent<Rigidbody2D>();
+                rb.AddForce(guntip.transform.up * 25f, ForceMode2D.Impulse);
+                //Debug.Log("AR shoot");
+                //flip the image
+                GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+                fire = true;
+                recoil(1f);
+            }
+            else if (CurrentWeapon_data.Code.Contains("WAR1") && Input.GetButtonDown("Fire1"))
+            {
+                //bullet.transform.localScale = new Vector3(0.556f, 0.556f, 0.556f);
+
+                GameObject bullet_AR = Instantiate(CurrentWeapon_data._bulletPpref,
+                    guntip.transform.position,
+                    guntip.transform.rotation);
+
+                //rotate the gunTip
+                bullet_AR.transform.eulerAngles = new Vector3(bullet_AR.transform.eulerAngles.x,
+                    bullet_AR.transform.eulerAngles.y,
+                    bullet_AR.transform.eulerAngles.z + 90);
+                bullet_AR.transform.parent = guntip.transform;
+                //Debug.Log("AR shoot");
+                //flip the image
+                //GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+                fire = true;
+                recoil(0.3f);
+
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                //Destroy(GameObject.Find("Bullet_AR1(Clone)"));
+                Destroy(GameObject.Find("Bullet_AR1(Clone)"));
+                Debug.Log("mouse1 key up, and destory AR1 bullet");
+            }
         }
-        else if (CurrentWeapon_data.Code == "Item_WAR1_AR" && Input.GetButtonDown("Fire1") && GameManager.instance.isPaused == false)
-        {
-            //bullet.transform.localScale = new Vector3(0.556f, 0.556f, 0.556f);
-            
-            GameObject bullet_AR = Instantiate(CurrentWeapon_data._bulletPpref,
-                guntip.transform.position, 
-                guntip.transform.rotation);
-            bullet_AR.transform.eulerAngles = new Vector3(bullet_AR.transform.eulerAngles.x, 
-                bullet_AR.transform.eulerAngles.y,
-                bullet_AR.transform.eulerAngles.z +90);
-            bullet_AR.transform.parent = guntip.transform;
-            //bullet_AR.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
-            //Rigidbody2D rb = bullet_AR.GetComponent<Rigidbody2D>();
-            //rb.AddForce(guntip.transform.up * 25f, ForceMode2D.Impulse);
-            //Debug.Log("AR shoot");
-            //flip the image
-            GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
-            fire = true;
-            //recoil();
-            
-        }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            //Debug.Log("mouse1 key up");
-            //Destroy(GameObject.Find("Bullet_AR1(Clone)"));
-            Destroy(GameObject.Find("Bullet_AR1(Clone)"));
-        }
+        
     }
     private void Shotgun_shoot()
     {
-        if ((CurrentWeapon_data.Code == "Item_WS0_Shotgun" && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.instance.isPaused == false))
+        if (GameManager.instance.isPaused == false)
         {
-            for (int i = 0; i <= 6; i++)
+            //normal shotgun
+            if (CurrentWeapon_data.Code == "Item_WS0_Shotgun" && Input.GetKeyDown(KeyCode.Mouse0))
             {
-                GameObject bullet_shotgun = Instantiate(CurrentWeapon_data._bulletPpref, guntip.transform.position, guntip.transform.rotation);
-                bullet_shotgun.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
-                bullet_shotgun.transform.eulerAngles = new Vector3(bullet_shotgun.transform.eulerAngles.x, bullet_shotgun.transform.eulerAngles.y, bullet_shotgun.transform.eulerAngles.z - 90);
-                Rigidbody2D rb_shotgun = bullet_shotgun.GetComponent<Rigidbody2D>();
-                
-                switch (i)
+                for (int i = 0; i <= 6; i++)
                 {
-                    case 0:
-                        rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(5f, 8.7f, 0f), ForceMode2D.Impulse);
-                        //Debug.Log("shotgun case0");
-                        break;
-                    case 1:
-                        rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(7.7f, 6.4f, 0f), ForceMode2D.Impulse);
-                        //Debug.Log("shotgun case1");
-                        break;
-                    case 2:
-                        rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(9.4f, 3.4f, 0f), ForceMode2D.Impulse);
-                        //Debug.Log("shotgun case2");
-                        break;
-                    case 3:
-                        rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(0f, 0f, 0f), ForceMode2D.Impulse);
-                        //Debug.Log("shotgun case3");
-                        break;
-                    case 4:
-                        rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(9.4f, -3.4f, 0f), ForceMode2D.Impulse);
-                        //Debug.Log("shotgun case4");
-                        break;
-                    case 5:
-                        rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(7.7f, -6.4f, 0f), ForceMode2D.Impulse);
-                        //Debug.Log("shotgun case5");
-                        break;
-                    case 6:
-                        rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(5f, -8.7f, 0f), ForceMode2D.Impulse);
-                        //Debug.Log("shotgun case6");
-                        break;
+                    GameObject bullet_shotgun = Instantiate(CurrentWeapon_data._bulletPpref, 
+                        guntip.transform.position, guntip.transform.rotation);
+                    bullet_shotgun.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
+
+                    bullet_shotgun.transform.eulerAngles = new Vector3(bullet_shotgun.transform.eulerAngles.x, 
+                        bullet_shotgun.transform.eulerAngles.y, 
+                        bullet_shotgun.transform.eulerAngles.z - 90);
+                    Rigidbody2D rb_shotgun = bullet_shotgun.GetComponent<Rigidbody2D>();
+
+                    switch (i)
+                    {
+                        case 0:
+                            rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(5f, 8.7f, 0f), ForceMode2D.Impulse);
+                            //Debug.Log("shotgun case0");
+                            break;
+                        case 1:
+                            rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(7.7f, 6.4f, 0f), ForceMode2D.Impulse);
+                            //Debug.Log("shotgun case1");
+                            break;
+                        case 2:
+                            rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(9.4f, 3.4f, 0f), ForceMode2D.Impulse);
+                            //Debug.Log("shotgun case2");
+                            break;
+                        case 3:
+                            rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(0f, 0f, 0f), ForceMode2D.Impulse);
+                            //Debug.Log("shotgun case3");
+                            break;
+                        case 4:
+                            rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(9.4f, -3.4f, 0f), ForceMode2D.Impulse);
+                            //Debug.Log("shotgun case4");
+                            break;
+                        case 5:
+                            rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(7.7f, -6.4f, 0f), ForceMode2D.Impulse);
+                            //Debug.Log("shotgun case5");
+                            break;
+                        case 6:
+                            rb_shotgun.AddForce(guntip.transform.up * 30f + new Vector3(5f, -8.7f, 0f), ForceMode2D.Impulse);
+                            //Debug.Log("shotgun case6");
+                            break;
+                    }
+
+                    fire = true;
+                    recoil(1f);
+                    /**/
+                    //Debug.Log("shotgun shoot");
                 }
-
-                fire = true;
-                recoil();
-                /**/
-                //Debug.Log("shotgun shoot");
             }
-            
-            
-
-        }
-        else if(CurrentWeapon_data.Code == "Item_WS1_Shotgun")//Input.GetButtonDown("Fire1") && GameManager.instance.isPaused == false)
-        {
-            
-            if(Input.GetButtonDown("Fire1") && GameManager.instance.isPaused == false)
+            //chargable shotgun
+            else if (CurrentWeapon_data.Code == "Item_WS1_Shotgun")//Input.GetButtonDown("Fire1") && GameManager.instance.isPaused == false)
             {
-                scaling = 0;
-                
-                Debug.Log("new shotgun fire key down: "+scaling);
-                
-            }
-            else if (Input.GetButtonUp("Fire1"))
+
+                if (Input.GetButtonDown("Fire1") && GameManager.instance.isPaused == false)
                 {
-                    GameObject bullet_SG = Instantiate(CurrentWeapon_data._bulletPpref, guntip.transform.position, guntip.transform.rotation);
-                    bullet_SG.transform.localScale = new Vector3(scaling, scaling, scaling);
-                    bullet_SG.transform.eulerAngles = new Vector3(bullet_SG.transform.eulerAngles.x, bullet_SG.transform.eulerAngles.y, bullet_SG.transform.eulerAngles.z - 90);
+                    GameManager.instance.scaling = 0;
+
+                    Debug.Log("new shotgun fire key down: " + GameManager.instance.scaling);
+
+                }
+                else if (Input.GetButtonUp("Fire1"))
+                {
+                    GameObject bullet_SG = Instantiate(CurrentWeapon_data._bulletPpref, 
+                                                        guntip.transform.position, 
+                                                        guntip.transform.rotation);
+
+                    bullet_SG.transform.localScale = new Vector3(GameManager.instance.scaling * 0.03F, 
+                                                                GameManager.instance.scaling * 0.03F, 
+                                                                GameManager.instance.scaling * 0.03F);
+
+                    bullet_SG.transform.eulerAngles = new Vector3(bullet_SG.transform.eulerAngles.x, 
+                                                                    bullet_SG.transform.eulerAngles.y, 
+                                                                    bullet_SG.transform.eulerAngles.z - 90);
                     Rigidbody2D rb = bullet_SG.GetComponent<Rigidbody2D>();
                     rb.AddForce(guntip.transform.up * 30f, ForceMode2D.Impulse);
                     fire = true;
+                    recoil(GameManager.instance.scaling);
                     Debug.Log("fire key up");
                 }
-           //transform.localScale = Vector3.Lerp(transform.localScale, transform.localScale * 2, Time.deltaTime * 10);
-            
+                //transform.localScale = Vector3.Lerp(transform.localScale, transform.localScale * 2, Time.deltaTime * 10);
+
+            }
         }
+        
     }
     private void SniperR_shoot()
     {
@@ -257,8 +298,8 @@ public class GunScript : MonoBehaviour
             fire = true;
             //Debug.Log("AR shoot");
             //flip the image
-            //GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation=Quaternion.Euler(0, 180, 0);
-            recoil();
+            GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<Transform>().rotation=Quaternion.Euler(0, 180, 0);
+            recoil(2f);
         }
         else if (CurrentWeapon_data.Code == "Item_WSR1_SniperR" && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.instance.isPaused == false)
         {
@@ -270,10 +311,30 @@ public class GunScript : MonoBehaviour
             Rigidbody2D rb = bullet_SR.GetComponent<Rigidbody2D>();
             rb.AddForce(guntip.transform.up * 30f, ForceMode2D.Impulse);
             fire = true;
-            recoil();
+            recoil(2.5f);
         }
     }
     
+    private void Fire()
+	{
+        if(CurrentWeapon_data.Code.Contains("Pistol"))
+		{
+            Pistol_shoot();
+		}
+        else if(CurrentWeapon_data.Code.Contains("AR"))
+		{
+            AR_shoot();
+		}
+        else if(CurrentWeapon_data.Code.Contains("Shotgun"))
+		{
+            Shotgun_shoot();
+		}
+        else if(CurrentWeapon_data.Code.Contains("SniperR"))
+		{
+            SniperR_shoot();
+		}
+	}
+
     void UseActivatable()
 	{
         if (Input.GetKeyDown(KeyCode.E) && GameManager.instance.Activatables != null)
@@ -285,7 +346,7 @@ public class GunScript : MonoBehaviour
             Debug.Log("Missing activatable");
 		}
 	}
-    void recoil()
+    void recoil(float reC)
 	{
         Vector2 Movement, Mouse_pos;
         Movement.x = Input.GetAxisRaw("Horizontal");
@@ -295,36 +356,10 @@ public class GunScript : MonoBehaviour
         Vector2 look_dir = Mouse_pos - Rb_player.position;
         if (Input.GetKey(KeyCode.Mouse0)&&fire==true)
         {
-            if (CurrentWeapon_data.itemType==Item.ItemType.Pistol)
-            {
-                Movement.x = 0.05f;
-                Movement.y = 0.05f;
-                //Mouse_pos = Cam.ScreenToWorldPoint(Input.mousePosition);
-                Rb_player.MovePosition(Rb_player.position - Movement * GameManager.instance.PlayerSpeed * look_dir * 0.01f);
-            }
-            else if (CurrentWeapon_data.itemType == Item.ItemType.AR)
-            {
-                Movement.x = 0.2f;
-                Movement.y = 0.2f;
-                //Mouse_pos = Cam.ScreenToWorldPoint(Input.mousePosition);
-                Rb_player.MovePosition(Rb_player.position - Movement * GameManager.instance.PlayerSpeed * look_dir * 0.01f);
-            }
-            else if (CurrentWeapon_data.itemType == Item.ItemType.Shotgun)
-            {
-                Movement.x = 0.8f;
-                Movement.y = 0.8f;
-                //Mouse_pos = Cam.ScreenToWorldPoint(Input.mousePosition);
-                Rb_player.MovePosition(Rb_player.position - Movement * GameManager.instance.PlayerSpeed * look_dir * 0.01f);
-            }
-            else if (CurrentWeapon_data.itemType == Item.ItemType.SniperR)
-            {
-                Movement.x = 2f;
-                Movement.y = 2f;
-                //Mouse_pos = Cam.ScreenToWorldPoint(Input.mousePosition);
-                Rb_player.MovePosition(Rb_player.position - Movement * GameManager.instance.PlayerSpeed * look_dir * 0.01f);
-            }
-
-
+            Movement.x = reC;
+            Movement.y = reC;
+            //Mouse_pos = Cam.ScreenToWorldPoint(Input.mousePosition);
+            Rb_player.MovePosition(Rb_player.position - Movement * GameManager.instance.PlayerSpeed * look_dir * 0.01f);
         }
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
@@ -343,19 +378,19 @@ public class GunScript : MonoBehaviour
         angle = Mathf.Atan2(_y,_x)*Mathf.Rad2Deg;
         GunOrientation(gun_to_player_distance);
         Flip();
-        Pistol_shoot();
-        AR_shoot();
-        Shotgun_shoot();
-        SniperR_shoot();
+
+
+        Fire();
+
         //recoil();
         if(Input.GetKeyUp(KeyCode.Mouse0))
 		{
             fire = false;
 		}
-        if(Input.GetButton("Fire1")&&CurrentWeapon_data.Code== "Item_WS1_Shotgun")
+        if(Input.GetButton("Fire1")&&CurrentWeapon_data.Code== "Item_WS1_Shotgun"&& GameManager.instance.scaling<=4)
 		{
-            scaling += Time.deltaTime*0.1f;
-            Debug.Log("scale: " + scaling);
+            GameManager.instance.scaling += Time.deltaTime;
+            Debug.Log("scale: " + GameManager.instance.scaling);
         }
         UseActivatable();
     }

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6699777131084843420}
   - component: {fileID: 6699777131084843423}
   - component: {fileID: 2197601484280640338}
+  - component: {fileID: 5810908688075484022}
   m_Layer: 0
   m_Name: WorldOneNS
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,6 +87,49 @@ MonoBehaviour:
   - {fileID: 1595409261590016670}
   - {fileID: 2166553158848797502}
   ItemSpawnPoint: {fileID: 0}
+  Decoration: []
+  ItemList:
+  - {fileID: 11400000, guid: 69de3682375797e4faa8146873b3e2d3, type: 2}
+  - {fileID: 11400000, guid: 40aa83eee17416c4f9a3dbaf3fd103ab, type: 2}
+  - {fileID: 11400000, guid: 44ed578264a1b1f4e93baff5c13d036b, type: 2}
+  - {fileID: 11400000, guid: 540f3ec9171ce92448fdb8e2e12c330e, type: 2}
+  - {fileID: 11400000, guid: a2df6e0c83ab9de49823ed2da5216cef, type: 2}
+  WeaponList:
+  - {fileID: 11400000, guid: a8871d9b2f7ae18428aec83d4dee6ec8, type: 2}
+  - {fileID: 11400000, guid: 8b8dbfb4a87de1b488b2ba8283ab2925, type: 2}
+  - {fileID: 11400000, guid: 9674e34145e16bb4b8758010ca0b856e, type: 2}
+  - {fileID: 11400000, guid: 447058099edbbe84da77c5b4cfb812d3, type: 2}
+  - {fileID: 11400000, guid: f997243e93da75940b5d126b7422ce9c, type: 2}
+  - {fileID: 11400000, guid: 316aa603d1d7ebe4fa78b5136739fe34, type: 2}
+  - {fileID: 11400000, guid: c0278adb3fc1d5f499e15d6f3c7cedbd, type: 2}
+  - {fileID: 11400000, guid: a380646444b95614f8f5a667d52c1772, type: 2}
+  offset: {x: 0, y: 0}
+--- !u!61 &5810908688075484022
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6699777131084843422}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6699777131257735321
 GameObject:
   m_ObjectHideFlags: 0
@@ -13819,6 +13863,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6699777131084843420}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 6699777131084843422}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead
@@ -14385,6 +14433,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6699777131084843420}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 6699777131084843422}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (3)
@@ -14711,6 +14763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6699777131084843420}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 6699777131084843422}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (2)
@@ -14832,14 +14888,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9009447796370884717, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
---- !u!4 &5062335035711765744 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3120143506073003506, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
-  m_PrefabInstance: {fileID: 7858217403612928258}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2166553158848797502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8294745984195019324, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
+  m_PrefabInstance: {fileID: 7858217403612928258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5062335035711765744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3120143506073003506, guid: 72861eacc71bf3444bc8700611dfb368, type: 3}
   m_PrefabInstance: {fileID: 7858217403612928258}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8129984224653112987
@@ -14849,6 +14905,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6699777131084843420}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 6699777131084843422}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (1)
@@ -15032,13 +15092,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1278692664719202881, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
---- !u!4 &2364020111567831938 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6687148383547878089, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
-  m_PrefabInstance: {fileID: 8936032000818784587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1595409261590016670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7649119356657556437, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
+  m_PrefabInstance: {fileID: 8936032000818784587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2364020111567831938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6687148383547878089, guid: 1a902ab5489c8694d920df43ddac9714, type: 3}
   m_PrefabInstance: {fileID: 8936032000818784587}
   m_PrefabAsset: {fileID: 0}

@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     private int playerSP; //Number of stat points player has.
     private int playerLvl; //Level of player
     
+    [Header ("UI Objects")]
     //HP,SHIELD,EXP BAR OBJECTS
     [SerializeField] private Image EXP_fill;
     [SerializeField] private Image HP_fill;
@@ -31,19 +32,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Slider EXPBar;
 
     [SerializeField] private Text HP_Text;
-
+    public GameObject LvlUp_text;
+    [SerializeField] private Text player_lvl_text;
+    
+    //[SerializeField] private GameObject BGM;
+    private BGM_Script _bgmControls;
+    public bool enemiesMusic;
     //Sorting order variables
     [SerializeField] private int sortingOrderBase = 5000;
     [SerializeField] private int scalingOrder = 100;
     [SerializeField] private int offset = 0;
     //---Ming
-    public bool isPaused = false;
 
+    [SerializeField] public Item CurrentWeaponData, CurrentGagetData;
+    public GameObject[] slots;
     public List<Item> items = new List<Item>();
     public List<int> itemNumbers = new List<int>();
-
-    public GameObject[] slots;
-    public GameObject bullet_prefab;
+    public bool isPaused = false;
+    public float scaling;
+    //public GameObject bullet_prefab;
 
     public Item Gadget=null, Activatables=null;
     //---
@@ -61,7 +68,7 @@ public class GameManager : MonoBehaviour
     public int ScalingOrder {get => scalingOrder;}
     public int Offset {get => offset;}
 
-
+    
 
     private void Awake() //Singleton to assure that we only have one instance of GameManager
     {
@@ -74,9 +81,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        _bgmControls = GameObject.FindGameObjectWithTag("BackgroundMusic").GetComponent<BGM_Script>();        
     }
 	private void Start()
 	{
+        player_lvl_text.text = $"Level {PlayerLvl}";
         DisplayItem();
         //
         for (int i = 0; i < items.Count; i++)
@@ -102,12 +111,15 @@ public class GameManager : MonoBehaviour
             playerEXP = temp;
             playerLvl++;
             playerSP++;
+            LvlUp_text.SetActive(PlayerSP > 0);
+            player_lvl_text.text = $"Level {PlayerLvl}";
         }
     }
 
     public void AddExp(int gains)
     {
         this.playerEXP += gains;
+        CheckExp();
     }
     ///---Ming
     void DisplayItem()
@@ -248,6 +260,7 @@ public class GameManager : MonoBehaviour
         Shield_fill.enabled = ShieldBar.value > 0;
         EXP_fill.enabled = EXPBar.value > 0;
 
+        CurrentWeaponData = GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
     }
     private void Update() 
     {
@@ -256,6 +269,7 @@ public class GameManager : MonoBehaviour
 		{
             useItem(Activatables);
 		}
+        
     }
 
 }

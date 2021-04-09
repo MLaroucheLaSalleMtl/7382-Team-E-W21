@@ -12,6 +12,8 @@ TagManager:
   - Item
   - EnemyAttackBox
   - Room
+  - Camera
+  - BackgroundMusic
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,6 @@ MonoBehaviour:
   effect_value: 0
   itemSprite: {fileID: 21300000, guid: 8eb9cbffb479d594995435e1116194af, type: 3}
   itemType: 0
-  _Pref: {fileID: 3029079433892822238, guid: 7727fa8a9c69c2b4894dbe6926181094, type: 3}
+  _Pref: {fileID: 5989864994118814570, guid: 0a1e34a0502e7574cabb4ba0474a5b5f, type: 3}
   _bulletPpref: {fileID: 3540015311699416596, guid: 8de0bf080c41c4143ad8fbef546f0322, type: 3}
   Code: Item_WAR1_AR

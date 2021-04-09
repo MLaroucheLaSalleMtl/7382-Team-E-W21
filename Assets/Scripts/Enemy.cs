@@ -86,6 +86,10 @@ public class Enemy : MonoBehaviour
         parentRoom.GetComponent<Map>().AddMonster();        
     }	
 	
+    public int referHP()
+    {
+        return HP;
+    }
 
 	public void TakeDMG(int pdmg) //Method called to reduce HP value when hit by player
     {
@@ -95,7 +99,7 @@ public class Enemy : MonoBehaviour
         {
             animator.SetBool("Dead", true); //Play Death Animation
         }
-        Debug.Log($"{gameObject.name} took + {pdmg} dmg");
+        //Debug.Log($"{gameObject.name} took + {pdmg} dmg");
     }
 
     
@@ -107,7 +111,6 @@ public class Enemy : MonoBehaviour
     public void Dead()  //Destroy this object when HP is 0 and increase player EXP; Called at end of Death Animation
     {
         parentRoom.GetComponent<Map>().ReduceMonster();
-        GameManager.instance.AddExp(this.EXP);
         animator.SetBool("Walk", false);
         //animator.SetBool("Dead", false);        
         //Ming
@@ -116,8 +119,9 @@ public class Enemy : MonoBehaviour
         ItemDrop();        
     }
 
-    public void RemoveThis()        //Actual method to destroy object -- Put it separate method because doesnt work when inside Dead()
+    public void RemoveThis()        //Actual method to destroy object -- Put it separate method because doesnt work when inside Dead() for some reason
     {
+        GameManager.instance.AddExp(EXP);
         Destroy(gameObject);
     }
     
@@ -246,14 +250,17 @@ public class Enemy : MonoBehaviour
 
     private void FlipSprite()
     {
+        if(animator.GetBool("Dead")!= true)
+		{
+            SpriteRenderer sprite = this.gameObject.GetComponent<SpriteRenderer>(); //Reference to this object's Sprite
+            float flip = transform.position.x - player.transform.position.x;
 
-        SpriteRenderer sprite = this.gameObject.GetComponent<SpriteRenderer>(); //Reference to this object's Sprite
-        float flip = transform.position.x - player.transform.position.x;
-        
-        //Flip sprite image depending if player is on left or right of this unit and if not retreating
-        sprite.flipX = ((flip > 0 && retreat == false) || (flip < 0 && retreat == true))?true:false;
-        //Flip projectile starting point position to maintain consistency with the sprite
-        attackStart.transform.localPosition = new Vector3((flip < 0)?headpos:-headpos,attackStart.transform.localPosition.y,0f);       
+            //Flip sprite image depending if player is on left or right of this unit and if not retreating
+            sprite.flipX = ((flip > 0 && retreat == false) || (flip < 0 && retreat == true)) ? true : false;
+            //Flip projectile starting point position to maintain consistency with the sprite
+            attackStart.transform.localPosition = new Vector3((flip < 0) ? headpos : -headpos, attackStart.transform.localPosition.y, 0f);
+        }
+               
         
     }
      
@@ -272,6 +279,7 @@ public class Enemy : MonoBehaviour
         if(animator.GetBool("Walk") && !walkaudio.isPlaying){walkaudio.Play();}else if(!animator.GetBool("Walk")){walkaudio.Pause();}
         //---------- Reset Timers -------------
         //Reset retreat (to prevent infinite retreating)
+
         _RetreatTimer();
         //Reset attack (to prevent infinite attacking)
         _AttackTimer();
