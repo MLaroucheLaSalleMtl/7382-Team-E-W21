@@ -6,7 +6,7 @@ public class Stormhead_MethodsBehaviour : MonoBehaviour
 {
     [Header ("Stormhead unit values")]
     [Tooltip ("Stormhead Health how much damage can it take before dying")]
-    [SerializeField] private int Health_Points;
+    private int Health_Points;
     [Tooltip ("Stormhead movement speed")]
     [Range (0, 10)] [SerializeField] private int speed;
     [Tooltip ("Experience given to player after that the Stormhead dies")]
@@ -32,11 +32,11 @@ public class Stormhead_MethodsBehaviour : MonoBehaviour
     [Tooltip ("Delay before following attack")]
     [Range (0f, 2f)] [SerializeField] private float cooldown;
     
+
     private void Start() 
     {
         p = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
-        parentRoom.GetComponent<Map>().AddMonster();
     }
 
     private float CheckDistance()
@@ -55,15 +55,7 @@ public class Stormhead_MethodsBehaviour : MonoBehaviour
             animator.SetBool("Attack", true);
         }  
     }
-
-    public void TakeDMG(int pdmg)
-    {
-        Health_Points -= pdmg;
-        if(Health_Points <= 0)
-        {
-            animator.SetBool("Dead",true);
-        }
-    }
+    
     public void BeginCooldown()
     {
         animator.SetBool("Attack", false);

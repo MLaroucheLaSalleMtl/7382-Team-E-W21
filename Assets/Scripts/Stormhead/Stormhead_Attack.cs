@@ -8,7 +8,10 @@ public class Stormhead_Attack : MonoBehaviour
     [SerializeField] private int damage;
     private Collider2D inZone;
 
-    
+    //Audio Sources/Clips
+    [SerializeField] private AudioSource Right_attack;
+    [SerializeField] private AudioSource Left_attack;
+     
     private void OnTriggerEnter2D(Collider2D other) 
     {        
         if(other.gameObject.tag == "Player")
@@ -26,18 +29,29 @@ public class Stormhead_Attack : MonoBehaviour
     public void LightningR()
     {
         if(inZone.gameObject.transform.position.x > transform.position.x)
-        inZone.gameObject.BroadcastMessage("PlayerHit", damage);
+        {
+            inZone.gameObject.BroadcastMessage("PlayerHit", damage);
+        }
+
     }
 
     public void LightningL()
     {
         if(inZone.gameObject.transform.position.x < transform.position.x)
-        inZone.gameObject.BroadcastMessage("PlayerHit", damage);
-    }        
+        {   
+            inZone.gameObject.BroadcastMessage("PlayerHit", damage);
+        }
 
-    // public void ToggleAttack()
-    // {
-    //     gameObject.GetComponent<Animator>().SetBool("Attack", false);
-    // }
+    }       
+
+    public void PlayRightAudio()
+    {
+        Right_attack.Play();
+    }
+    public void PlayLeftAudio()
+    {
+        Left_attack.Play();
+    }
+    
     
 }

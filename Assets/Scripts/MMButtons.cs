@@ -10,6 +10,11 @@ public class MMButtons : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void SettingsBtn()
+    {
+        //SceneManager.LoadScene();
+    }
     public void QuitBtn()
     {
         Application.Quit();

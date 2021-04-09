@@ -15,8 +15,10 @@ MonoBehaviour:
   itemName: Red Pill
   itemDes: You never thought about what is it, right?
   Dmg: 0
-  price: 500
+  Price: 0
   effect_value: 10
   itemSprite: {fileID: 21300000, guid: 790f9fe3dafe5ee4fa13466ff8592ae6, type: 3}
   itemType: 8
+  _Pref: {fileID: 144305870699709259, guid: 4acf5ab1bdb18414897537acb5cd31bc, type: 3}
+  _bulletPpref: {fileID: 0}
   Code: Item_C0_RedPill

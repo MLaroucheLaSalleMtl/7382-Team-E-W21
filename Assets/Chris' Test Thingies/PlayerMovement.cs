@@ -39,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
         move.Enable();
     }
 
+    public void _updateSpeed()
+    {
+        speed = GameManager.instance.PlayerSpeed;
+    }
     private void _rbMove()
     {
         Vector2 temp = move.ReadValue<Vector2>();

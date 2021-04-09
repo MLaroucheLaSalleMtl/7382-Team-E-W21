@@ -12,7 +12,7 @@ public class StatsLevelUp : MonoBehaviour
     [Header("Value Increase per stat level")]
     [Range (10,50)] [SerializeField] private int HP;
     [Range(10, 50)] [SerializeField] private int Armor;
-    [Range (10,50)] [SerializeField] private int Speed;
+    [Range (0f,5f)] [SerializeField] private float Speed;
     [Range (0.01f, 0.03f)] [SerializeField] private float Cooldown;
     [Range(0.01f, 0.03f)] [SerializeField] private float ReloadSpeed;
     
@@ -39,6 +39,7 @@ public class StatsLevelUp : MonoBehaviour
                     break;
                 case "incSpeed":
                     manager.PlayerSpeed += Speed;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>()._updateSpeed();
                     break;
                 case "incCDR":
                     manager.PlayerCDReduc += Cooldown;
@@ -56,7 +57,7 @@ public class StatsLevelUp : MonoBehaviour
     public void ShowStats() //Call this method when player presses button to open Stats menu
     {        
         statText.text = "Max HP = " + manager.PlayerMAXHP +
-                       "\nArmor = " + manager.PlayerArmor +
+                       "\nShield = " + manager.PlayerArmor +
                        "\nSpeed = " + manager.PlayerSpeed +
                        "\nCooldown = " + manager.PlayerCDReduc*100 + "%" +
                        "\nReload = " + manager.PlayerRSpeed*100 + "%";

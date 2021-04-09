@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   Speed: 2
-  EXP: 15
+  EXP: 100
   melee: 1
   detectRange: 15
   attackRange: 1
@@ -204,7 +204,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f251ae03aa0cfeb47b0dfb4c5ed2b548, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -489,7 +489,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3438109231407534025}
-  - component: {fileID: 3438109231407534026}
   - component: {fileID: 316197670}
   m_Layer: 0
   m_Name: Melee
@@ -512,22 +511,6 @@ Transform:
   m_Father: {fileID: 3438109230670903671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &3438109231407534026
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3438109231407534027}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.12903069, y: -0.023089057}
-  m_Size: {x: 0.49988723, y: 0.44137996}
-  m_Direction: 1
 --- !u!60 &316197670
 PolygonCollider2D:
   m_ObjectHideFlags: 0

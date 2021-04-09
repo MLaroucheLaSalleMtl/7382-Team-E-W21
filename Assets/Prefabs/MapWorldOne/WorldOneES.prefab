@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4683652397747415940}
   - component: {fileID: 453421351255026083}
-  - component: {fileID: -5724616253010823694}
   - component: {fileID: 954826579294112431}
   m_Layer: 0
   m_Name: WorldOneES
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,6 +53,7 @@ Transform:
   - {fileID: 2028454701728414518}
   - {fileID: 2873080929742260770}
   - {fileID: 525028290231090196}
+  - {fileID: 2826669258728576757}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69,18 +69,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &-5724616253010823694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769242474670530563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a955db66307e6c84cbe08c35b6ad5fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &954826579294112431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +85,24 @@ MonoBehaviour:
   Doors:
   - {fileID: 6475481051909981191}
   - {fileID: 3825963365185009565}
+  ItemSpawnPoint: {fileID: 3615223438942746550}
+  Decoration: []
+  ItemList:
+  - {fileID: 11400000, guid: 69de3682375797e4faa8146873b3e2d3, type: 2}
+  - {fileID: 11400000, guid: 40aa83eee17416c4f9a3dbaf3fd103ab, type: 2}
+  - {fileID: 11400000, guid: 44ed578264a1b1f4e93baff5c13d036b, type: 2}
+  - {fileID: 11400000, guid: 540f3ec9171ce92448fdb8e2e12c330e, type: 2}
+  - {fileID: 11400000, guid: a2df6e0c83ab9de49823ed2da5216cef, type: 2}
+  WeaponList:
+  - {fileID: 11400000, guid: a8871d9b2f7ae18428aec83d4dee6ec8, type: 2}
+  - {fileID: 11400000, guid: 8b8dbfb4a87de1b488b2ba8283ab2925, type: 2}
+  - {fileID: 11400000, guid: 9674e34145e16bb4b8758010ca0b856e, type: 2}
+  - {fileID: 11400000, guid: 447058099edbbe84da77c5b4cfb812d3, type: 2}
+  - {fileID: 11400000, guid: f997243e93da75940b5d126b7422ce9c, type: 2}
+  - {fileID: 11400000, guid: 316aa603d1d7ebe4fa78b5136739fe34, type: 2}
+  - {fileID: 11400000, guid: c0278adb3fc1d5f499e15d6f3c7cedbd, type: 2}
+  - {fileID: 11400000, guid: a380646444b95614f8f5a667d52c1772, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!1 &1000200336306557010
 GameObject:
   m_ObjectHideFlags: 0
@@ -10086,6 +10092,36 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!1 &3615223438942746550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2826669258728576757}
+  m_Layer: 0
+  m_Name: ItemSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2826669258728576757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615223438942746550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4683652397747415940}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4753720956627351117
 GameObject:
   m_ObjectHideFlags: 0

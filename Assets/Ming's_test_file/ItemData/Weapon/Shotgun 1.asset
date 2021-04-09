@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Charger
   itemDes: Longer you hold, hotter you feel
-  Dmg: 1
+  Dmg: 10
   Price: 0
   effect_value: 0.01
   itemSprite: {fileID: 21300000, guid: de37753b1c98c9048a7549ce4f7d244a, type: 3}

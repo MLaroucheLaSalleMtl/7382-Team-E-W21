@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5260594219039859492}
   - component: {fileID: 5260594219039859493}
   - component: {fileID: 2972752880296217138}
+  - component: {fileID: 8164145214077911417}
   m_Layer: 0
   m_Name: WorldOneNE
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +43,7 @@ Transform:
   - {fileID: 246653672952243900}
   - {fileID: 6609350746634701099}
   - {fileID: 5279707042201091797}
+  - {fileID: 1480486430625205334}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,6 +75,50 @@ MonoBehaviour:
   Doors:
   - {fileID: 9185678999961851601}
   - {fileID: 1320067993688073323}
+  ItemSpawnPoint: {fileID: 5982516488100673597}
+  Decoration: []
+  ItemList:
+  - {fileID: 11400000, guid: 69de3682375797e4faa8146873b3e2d3, type: 2}
+  - {fileID: 11400000, guid: 40aa83eee17416c4f9a3dbaf3fd103ab, type: 2}
+  - {fileID: 11400000, guid: 44ed578264a1b1f4e93baff5c13d036b, type: 2}
+  - {fileID: 11400000, guid: 540f3ec9171ce92448fdb8e2e12c330e, type: 2}
+  - {fileID: 11400000, guid: a2df6e0c83ab9de49823ed2da5216cef, type: 2}
+  WeaponList:
+  - {fileID: 11400000, guid: a8871d9b2f7ae18428aec83d4dee6ec8, type: 2}
+  - {fileID: 11400000, guid: 8b8dbfb4a87de1b488b2ba8283ab2925, type: 2}
+  - {fileID: 11400000, guid: 9674e34145e16bb4b8758010ca0b856e, type: 2}
+  - {fileID: 11400000, guid: 447058099edbbe84da77c5b4cfb812d3, type: 2}
+  - {fileID: 11400000, guid: f997243e93da75940b5d126b7422ce9c, type: 2}
+  - {fileID: 11400000, guid: 316aa603d1d7ebe4fa78b5136739fe34, type: 2}
+  - {fileID: 11400000, guid: c0278adb3fc1d5f499e15d6f3c7cedbd, type: 2}
+  - {fileID: 11400000, guid: a380646444b95614f8f5a667d52c1772, type: 2}
+  offset: {x: 0, y: 0}
+--- !u!61 &8164145214077911417
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5260594219039859490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5260594219319977887
 GameObject:
   m_ObjectHideFlags: 0
@@ -17213,6 +17259,36 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &5982516488100673597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480486430625205334}
+  m_Layer: 0
+  m_Name: ItemSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1480486430625205334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982516488100673597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5260594219039859492}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &218442865458946916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17282,6 +17358,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5260594219039859492}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 5260594219039859490}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (2)
@@ -17478,6 +17558,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5260594219039859492}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 5260594219039859490}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (3)
@@ -17544,6 +17628,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5260594219039859492}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 5260594219039859490}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead
@@ -17802,6 +17890,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5260594219039859492}
     m_Modifications:
+    - target: {fileID: 4523697914976158133, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
+      propertyPath: parentRoom
+      value: 
+      objectReference: {fileID: 5260594219039859490}
     - target: {fileID: 6910101325616978785, guid: a4bc6a930f01d5048809ca6d1023af2d, type: 3}
       propertyPath: m_Name
       value: Stormhead (1)
