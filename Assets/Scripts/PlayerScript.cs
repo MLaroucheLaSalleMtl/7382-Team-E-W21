@@ -48,7 +48,7 @@ public class PlayerScript : MonoBehaviour
         //Debug.Log($"Player was hit for {newDmg} damage");
     }
 
-    void DmgSound(string DmgType)
+    void DmgSound(string DmgType)//play hit sound responding to dmgType
 	{
         if(DmgType=="flesh")
         {

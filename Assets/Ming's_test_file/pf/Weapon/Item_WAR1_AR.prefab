@@ -113,3 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: a8871d9b2f7ae18428aec83d4dee6ec8, type: 2}
+  float_distance: 0.01
+  maxDistance: 0.1
+  refreshTimer: 0.05

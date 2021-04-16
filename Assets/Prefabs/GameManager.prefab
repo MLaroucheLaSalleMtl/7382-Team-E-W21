@@ -47,7 +47,7 @@ MonoBehaviour:
   playerMAXHP: 100
   playerShield: 0
   expToLevel: 100
-  playerSpeed: 4
+  playerSpeed: 5.8
   playerMAXShield: 50
   playerCDReduc: 0
   playerRSpeed: 0
@@ -59,6 +59,8 @@ MonoBehaviour:
   EXPBar: {fileID: 0}
   HP_Text: {fileID: 0}
   LvlUp_text: {fileID: 0}
+  player_lvl_text: {fileID: 0}
+  enemiesMusic: 0
   sortingOrderBase: 5000
   scalingOrder: 100
   offset: 0
@@ -93,5 +95,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 40aa83eee17416c4f9a3dbaf3fd103ab, type: 2}
   itemNumbers: 03000000
   isPaused: 0
+  scaling: 0
   Gadget: {fileID: 0}
   Activatables: {fileID: 0}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
+    //Bryan
     public int NbOfMonster;
     public GameObject[] Doors;
     public GameObject ItemSpawnPoint;
@@ -19,7 +20,7 @@ public class Map : MonoBehaviour
     private BGM_Script _BGM;
     [SerializeField] private Vector2 offset;
     private Transform p; //Player reference
-    
+    private bool Boss;
 
 
     private bool IsPLayerOnTemplate; //this variable will determine if player is currently on the level (Template)
@@ -38,6 +39,7 @@ public class Map : MonoBehaviour
         if(IsPLayerOnTemplate)
         {
             GameManager.instance.enemiesMusic = NbOfMonster > 0;
+            GameManager.instance.bossMusic = Boss;
         }
     }
     bool checkPlayerPos() //Checks if player position is inside the confined area of the map based on its position's x and y values
@@ -55,12 +57,16 @@ public class Map : MonoBehaviour
         return false;
     }
 
+    public void BossInRoom(bool b)
+    {
+        Boss = b;        
+    }
     // Update is called once per frame
     void Update()
     {
         changeMusic();
     }
-
+    // ------- Chris (END)
     public void AddMonster()
     {
         NbOfMonster++;
@@ -130,7 +136,7 @@ public class Map : MonoBehaviour
 
     private void SpawnItem()
     {
-        RNG = Random.Range(0, 1);
+        RNG = Random.Range(0, 100);
         if (RNG <= gun_dropchance)
         {
             RNG = Random.Range(0, WeaponList.Length);

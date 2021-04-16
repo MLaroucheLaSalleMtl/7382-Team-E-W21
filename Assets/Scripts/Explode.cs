@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
+    [SerializeField] Item grenade_data;
     [SerializeField] float activeTime = 1;
-    // Start is called before the first frame update
-    Collider2D enemy;
+    [SerializeField] AudioSource explodsionSfx;
+    //Collider2D enemy;
     void Start()
     {
-        
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        explodsionSfx.clip = GameManager.instance.CurrentGagetData._ItemSound0;
+        //explodsionSfx.PlayOneShot(grenade_data._ItemSound0);
+        explodsionSfx.Play();
     }
 
     //extra efx
@@ -28,7 +32,7 @@ public class Explode : MonoBehaviour
         Destroy(this.gameObject, activeTime);
     }
     
-	private void OnTriggerStay2D(Collider2D collision)
+	/*private void OnTriggerStay2D(Collider2D collision)
 	{
         enemy = collision;
         if (collision.tag == "Monster" && enemy == collision)
@@ -36,21 +40,15 @@ public class Explode : MonoBehaviour
             collision.GetComponent<Enemy>().TakeDMG(GameManager.instance.Gadget.Dmg);
             //Debug.Log("Enemy enter explosion area");
         }
-    }
+    }*/
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Monster"&&enemy==other)
+        if (other.tag == "Monster")
         {
-            other.GetComponent<Enemy>().TakeDMG(GameManager.instance.Gadget.Dmg);
+            other.GetComponent<Enemy>().TakeDMG(grenade_data.Dmg);
             Debug.Log("Enemy enter explosion area");
         }
+        
     }
-	private void OnTriggerExit(Collider other)
-	{
-        if(enemy==other)
-		{
-            enemy = null;
-		}
-		
-	}
+	
 }

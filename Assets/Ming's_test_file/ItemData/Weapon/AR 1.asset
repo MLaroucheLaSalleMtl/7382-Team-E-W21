@@ -21,4 +21,10 @@ MonoBehaviour:
   itemType: 0
   _Pref: {fileID: 5989864994118814570, guid: 0a1e34a0502e7574cabb4ba0474a5b5f, type: 3}
   _bulletPpref: {fileID: 3540015311699416596, guid: 8de0bf080c41c4143ad8fbef546f0322, type: 3}
+  _ItemSound0: {fileID: 8300000, guid: 5b8901772ab55c64baaba01ecc55281c, type: 3}
+  _ItemSound1: {fileID: 0}
   Code: Item_WAR1_AR
+  FireRateTime: 0
+  MaxAmmo: 10
+  ReloadTime: 3
+  GunReloadAudio: {fileID: 8300000, guid: 08afe7c4871525f41a793928eabc1eda, type: 3}

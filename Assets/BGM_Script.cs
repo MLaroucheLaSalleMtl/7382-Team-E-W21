@@ -29,13 +29,13 @@ public class BGM_Script : MonoBehaviour
             EngagedMusic.Stop();
             BossMusic.Stop();
         }
-        else if(!inBossRoom && enemiesAlive && !EngagedMusic.isPlaying)
+        if(!inBossRoom && enemiesAlive && !EngagedMusic.isPlaying)
         {
             DefaultMusic.Stop();
             EngagedMusic.Play();
             BossMusic.Stop();
         }
-        else if (inBossRoom && !BossMusic.isPlaying)
+        if (inBossRoom && !BossMusic.isPlaying)
         {
             DefaultMusic.Stop();
             EngagedMusic.Stop();
@@ -43,19 +43,20 @@ public class BGM_Script : MonoBehaviour
         }
     }
 
-    public void SetBoss(bool b)
-    {
-        inBossRoom = b;
-    }
+    // public void SetBoss(bool b)
+    // {
+    //     inBossRoom = b;
+    // }
 
-    public void SetEnemies(bool b)
-    {
-        enemiesAlive = b;
-    }
+    // public void SetEnemies(bool b)
+    // {
+    //     enemiesAlive = b;
+    // }
     // Update is called once per frame
     void Update()
     {
         enemiesAlive = GameManager.instance.enemiesMusic;
+        inBossRoom = GameManager.instance.bossMusic;
         _updateMusic();
     }
 }

@@ -19,14 +19,14 @@ public class UI_activatables : MonoBehaviour
     void DisplayActivatables()
 	{
         //Debug.Log("DisplayAct");
-        if(GameManager.instance.Gadget ==null)
+        if(GameManager.instance.CurrentGagetData ==null)
 		{
             this.gameObject.transform.GetChild(0).GetComponent<Image>().color = new Color(1,1,1,0);
             
         }
 		else
 		{
-            this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.instance.Gadget.itemSprite;
+            this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.instance.CurrentGagetData.itemSprite;
             this.gameObject.transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
             //Debug.Log("slot active");
         }

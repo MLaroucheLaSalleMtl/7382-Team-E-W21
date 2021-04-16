@@ -21,4 +21,10 @@ MonoBehaviour:
   itemType: 0
   _Pref: {fileID: 2455973999305215593, guid: f78024c46271646459cdf5d1393540b2, type: 3}
   _bulletPpref: {fileID: 7725870797419317133, guid: 899325ddb066f8441b498ad1350487a5, type: 3}
+  _ItemSound0: {fileID: 8300000, guid: 81869dd873f7cd04b9a7e932616044d0, type: 3}
+  _ItemSound1: {fileID: 0}
   Code: Item_WSR1_SniperR
+  FireRateTime: 1.8
+  MaxAmmo: 5
+  ReloadTime: 3
+  GunReloadAudio: {fileID: 8300000, guid: 69514449e8c9ba44584c0ff6ca4f5cb5, type: 3}
