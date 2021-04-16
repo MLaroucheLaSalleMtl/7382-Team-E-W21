@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Item",fileName ="New Item")]
-public class Item:ScriptableObject
+[CreateAssetMenu(menuName = "Item", fileName = "New Item")]
+public class Item : ScriptableObject
 {
     public string itemName;
     public enum ItemType
@@ -24,7 +24,7 @@ public class Item:ScriptableObject
 
         Coin,
         Exp_point,
-        
+
     }
     public string itemDes;
     public int Dmg;
@@ -37,20 +37,23 @@ public class Item:ScriptableObject
     public ItemType itemType;
     public GameObject _Pref;
     public GameObject _bulletPpref;
+    public AudioClip _ItemSound0, _ItemSound1;
     public string Code;
+    //Bryan
+    public float FireRateTime; //Time before the player can shoot again
+    public int MaxAmmo; //Max ammunition the gun can have
+    public float ReloadTime;
+    public AudioClip GunReloadAudio; //Reload audio effect
 
     //public Item(string name, ItemType itemType)
     //{
 
     //}
 
-
-
-
     public Sprite GetSprite()//Missing weapon sprite due to type sorting changed
     {
-        
-        switch(itemType)
+
+        switch (itemType)
         {
             default:
             //case ItemType.Pistol: return ItemAssets.Instance.PistolSprite;
@@ -64,5 +67,9 @@ public class Item:ScriptableObject
             case ItemType.Syringe: return ItemAssets.Instance.SyringeSprite;
         }
     }
+
+
+
+
     
 }

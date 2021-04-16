@@ -21,4 +21,6 @@ MonoBehaviour:
   itemType: 6
   _Pref: {fileID: 624664584102713252, guid: c0eeef5119bc3fc46962ff6b1c0a33e0, type: 3}
   _bulletPpref: {fileID: 2223594788042747029, guid: 61587e66687cb724490f9d61bffcce8c, type: 3}
+  _ItemSound0: {fileID: 8300000, guid: fc96116dc3c141440aabb5605744fea2, type: 3}
+  _ItemSound1: {fileID: 0}
   Code: Item_G0_Grenade

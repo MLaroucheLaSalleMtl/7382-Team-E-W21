@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 624664584102713256}
   - component: {fileID: 624664584102713257}
   - component: {fileID: -5155378321948431120}
-  - component: {fileID: 228974609}
   - component: {fileID: 228974610}
+  - component: {fileID: 228974609}
   m_Layer: 0
   m_Name: Item_G0_Grenade
   m_TagString: Item
@@ -116,6 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 40aa83eee17416c4f9a3dbaf3fd103ab, type: 2}
+  float_distance: 0.03
+  maxDistance: 0.125
+  refreshTimer: 0.05
 --- !u!114 &-5155378321948431120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +135,25 @@ MonoBehaviour:
   explode: 0
   deVelocity: 3
   rb: {fileID: 0}
+--- !u!95 &228974610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624664584102713252}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3babff0b2d7685f498c2a7336366ef3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &228974609
 Rigidbody2D:
   serializedVersion: 4
@@ -153,22 +175,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &228974610
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624664584102713252}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3babff0b2d7685f498c2a7336366ef3c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

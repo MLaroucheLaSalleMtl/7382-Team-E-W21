@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
-  Speed: 2
-  EXP: 100
+  Speed: 4
+  EXP: 20
   melee: 1
   detectRange: 15
   attackRange: 1
@@ -65,10 +65,12 @@ MonoBehaviour:
   attackCooldown: 1.5
   attackStart: {fileID: 3438109231407534027}
   attackFrame: 0.5
-  parentRoom: {fileID: 0}
   newCenter: {x: 0, y: 0.5, z: 0}
   walkaudio: {fileID: 6300703641857225498}
   deathaudio: {fileID: 7433062241420088174}
+  Fireworm: 0
+  parentRoom: {fileID: 0}
+  rangeFrequency: 0
 --- !u!114 &3438109230670903670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 3438109231407534027}
-  damage: 20
+  damage: 25
   inZone: {fileID: 0}
   attackaudio: {fileID: 7741215850208536036}
 --- !u!95 &3438109230670903673
@@ -396,7 +398,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8227f3d9e0a396e4da3953cc73b1a044, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

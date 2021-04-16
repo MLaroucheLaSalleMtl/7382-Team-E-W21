@@ -6,12 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+    //Chris's Variables (START)
     [Header("Character Stats")] //Used to retrieve player's stat values
 
     public float playerHP;
     [SerializeField] private float playerMAXHP; //Highest HP the player can have at any one time.
     [SerializeField] private float playerShield; //Player Armor/tempHP at start of game.
     [SerializeField] private float expToLevel; //Amount of exp needed to level up
+    [SerializeField] private float ExtraXpLvl; //Bryan The amount of Xp we addup to the max to level up
     [Range(0f,10f)] [SerializeField] private float playerSpeed; //The movement speed of the player.
     [Range (0f,50f)] [SerializeField] private float playerMAXShield;
     [Range(0f, 0.5f)] [SerializeField] private float playerCDReduc; //Cooldown Reduction on Dash/Items ---- Range is for testing purposes
@@ -38,22 +40,27 @@ public class GameManager : MonoBehaviour
     //[SerializeField] private GameObject BGM;
     private BGM_Script _bgmControls;
     public bool enemiesMusic;
+    public bool bossMusic;
     //Sorting order variables
     [SerializeField] private int sortingOrderBase = 5000;
     [SerializeField] private int scalingOrder = 100;
     [SerializeField] private int offset = 0;
+    //Chris's Variables (END)
     //---Ming
 
-    [SerializeField] public Item CurrentWeaponData, CurrentGagetData;
+    [SerializeField] public Item CurrentWeaponData, CurrentGagetData=null, Activatables = null;
     public GameObject[] slots;
     public List<Item> items = new List<Item>();
     public List<int> itemNumbers = new List<int>();
     public bool isPaused = false;
+    public bool fire = false;
     public float scaling;
     //public GameObject bullet_prefab;
 
-    public Item Gadget=null, Activatables=null;
+
     //---
+    
+    
     //Encapsulation
     public float PlayerHP { get => playerHP; set => playerHP = value; }
     public float PlayerMAXHP { get => playerMAXHP; set => playerMAXHP = value; }
@@ -82,17 +89,27 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         _bgmControls = GameObject.FindGameObjectWithTag("BackgroundMusic").GetComponent<BGM_Script>();        
+        //Chris
+        PlayAll();
     }
-	private void Start()
+    private void PlayAll() //Chris
+    {
+        isPaused = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
+        Time.timeScale = 1f;
+
+    }
+	private void Start() 
 	{
-        player_lvl_text.text = $"Level {PlayerLvl}";
+        player_lvl_text.text = $"Level {PlayerLvl}"; //Chris
+        // Ming
         DisplayItem();
-        //
+        // Ming
         for (int i = 0; i < items.Count; i++)
         {
             if (items[i].itemType==Item.ItemType.Gaget)
             {
-                Gadget = items[i];
+                CurrentGagetData = items[i];
             }
             else if (items[i].itemType == Item.ItemType.Activatable)
             {
@@ -101,9 +118,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-	public void SetWeapon(){}
-
-    private void CheckExp()
+    private void CheckExp() //Chris
     {
         if(playerEXP >= expToLevel)
         {
@@ -113,10 +128,13 @@ public class GameManager : MonoBehaviour
             playerSP++;
             LvlUp_text.SetActive(PlayerSP > 0);
             player_lvl_text.text = $"Level {PlayerLvl}";
+
+            //Bryan
+            expToLevel += ExtraXpLvl;
         }
     }
 
-    public void AddExp(int gains)
+    public void AddExp(int gains) //Chris
     {
         this.playerEXP += gains;
         CheckExp();
@@ -191,6 +209,10 @@ public class GameManager : MonoBehaviour
 						{
                             Activatables = null;
 						}
+                        else if( CurrentGagetData == item)
+						{
+                            CurrentGagetData = null;
+						}
                         items.Remove(item);
                         itemNumbers.Remove(itemNumbers[i]);
 					}
@@ -244,7 +266,7 @@ public class GameManager : MonoBehaviour
     }
     
     /// </summary>
-    void UpdateBars()
+    void UpdateBars() //Chris
     {
         float Hp = PlayerHP/PlayerMAXHP;
         float Shield = PlayerArmor/PlayerMAXArmor;
@@ -254,17 +276,18 @@ public class GameManager : MonoBehaviour
         HP_Text.text = $"{PlayerHP}/{PlayerMAXHP}"; //Update HP Bar Text displayed text
         ShieldBar.value = Shield; //Update Shield Bar displayed value
         EXPBar.value = EXP; //Update EXP Bar displayed value
-        //Debug.Log($"Player HP Ratio is {Hp}\nPlayer Armor ratio is {Shield}");
         
         HP_fill.enabled = HPBar.value > 0;
         Shield_fill.enabled = ShieldBar.value > 0;
         EXP_fill.enabled = EXPBar.value > 0;
 
-        CurrentWeaponData = GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data;
+        CurrentWeaponData = GameObject.Find("PlayerTest").transform.GetChild(0).GetComponent<GunScript>().CurrentWeapon_data; //Ming
     }
     private void Update() 
     {
-        UpdateBars();
+        //Chris
+        UpdateBars(); 
+        //Ming
         if(Input.GetKeyDown(KeyCode.E)&&Activatables!=null)
 		{
             useItem(Activatables);

@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Blue rose
   itemDes: Curious. What form of power is this?
-  Dmg: 10
+  Dmg: 8
   Price: 5000
   effect_value: 0
   itemSprite: {fileID: 21300000, guid: 1ff2c500ad4217f4d891b2892dfe4f07, type: 3}
   itemType: 0
   _Pref: {fileID: 4729354382701900995, guid: 183ad5882cfd67c41a3657b56f5febc5, type: 3}
   _bulletPpref: {fileID: 4375970839720606273, guid: a6e05d6d6f109de418d847f6d6406440, type: 3}
+  _ItemSound0: {fileID: 8300000, guid: 08f78eba48bb21c44ac5a74ca84efc83, type: 3}
+  _ItemSound1: {fileID: 8300000, guid: 92d35fe1c59bbd14eaee9e3d3b54cea7, type: 3}
   Code: Item_WP1_Pistol
+  FireRateTime: 0.2
+  MaxAmmo: 5
+  ReloadTime: 2
+  GunReloadAudio: {fileID: 8300000, guid: d62b59c06721ff54bbcbc4f0f1c7f74d, type: 3}

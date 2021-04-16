@@ -21,4 +21,10 @@ MonoBehaviour:
   itemType: 0
   _Pref: {fileID: 2311924778035139398, guid: 6cddbfc3d41b85a44897cfd778b89b64, type: 3}
   _bulletPpref: {fileID: 7228842895284390296, guid: 20996faf038e9fb49a708f15b8901f59, type: 3}
+  _ItemSound0: {fileID: 8300000, guid: 339724fc5623b1948ae6557b400fb256, type: 3}
+  _ItemSound1: {fileID: 0}
   Code: Item_WS0_Shotgun
+  FireRateTime: 0.75
+  MaxAmmo: 6
+  ReloadTime: 4
+  GunReloadAudio: {fileID: 8300000, guid: 4e03305c139f0954c819856c17d8bc64, type: 3}

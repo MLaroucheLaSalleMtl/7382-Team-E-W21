@@ -41,14 +41,6 @@ public class LevelUpText_Script : MonoBehaviour
         yield return new WaitForSeconds(pulsing_time); //Amount of time to wait before increase/decrease in alpha value
         
         StartCoroutine("ChangeAlpha");
-    }
-
-
+    }   
     
-    // Update is called once per frame
-    void Update()
-    {   
-        //textAlpha.color = new Vector4(255f,255f,255f,alpha);
-        //textAlpha.color = new Vector4(255f,255f,255f,alpha);
-    }
 }

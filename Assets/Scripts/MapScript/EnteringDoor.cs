@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnteringDoor : MonoBehaviour
 {
+    //Bryan
     /// <summary>
     /// 1 --> North
     /// 2 --> East

@@ -62,7 +62,7 @@ public class StatsLevelUp : MonoBehaviour
                        "\nCooldown = " + manager.PlayerCDReduc*100 + "%" +
                        "\nReload = " + manager.PlayerRSpeed*100 + "%";
 
-        spText.text = "Skill Points: " + manager.PlayerSP;
+        spText.text = "Stat Points: " + manager.PlayerSP;
         //Disable/enable buttons to increase stats
         GameObject[] toggle = new GameObject[5];
         toggle = GameObject.FindGameObjectsWithTag("StatBtn");

@@ -114,6 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 540f3ec9171ce92448fdb8e2e12c330e, type: 2}
+  float_distance: 0.03
+  maxDistance: 0.125
+  refreshTimer: 0.05
 --- !u!95 &358967670942630450
 Animator:
   serializedVersion: 3
